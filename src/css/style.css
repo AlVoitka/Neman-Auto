@@ -1,0 +1,9 @@
+h1 {
+  color: aqua;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+}
+/*# sourceMappingURL=style.css.map */
