@@ -1,0 +1,7 @@
+1. Размещение иконки или картинки по центру блока
+
+i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

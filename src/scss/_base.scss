@@ -16,18 +16,22 @@ a {
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
     border: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
     cursor: pointer;
     transition: 0.3s all;
     outline: none;
-    &_white {
+
+    &_header {
         background-color: #fff;
+        height: 40px;
+        
     }
     &_dark {
-        background-color: $dark;
+        background-color: red;
         color: #fff;
         border: none;
     }
@@ -35,9 +39,16 @@ a {
         height: 50px;
     }
     &:hover {
-        color: aqua;
-        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3); 
+        color:rgb(65, 90, 235);
+        border: 1px solid rgb(238, 125, 125); 
+        font-size: 16px;
     }
+    
+}
+
+.main {
+    height: 2000px;
+    background-color: rgba(65, 90, 235, 0.2);
 }
 
 .container {
