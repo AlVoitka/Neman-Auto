@@ -1,14 +1,14 @@
 h1 {
-    color: black;
+    color: rgb(65, 90, 235);
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 60px;
     padding: 0 50px;
-    background-color: rgba(70, 88, 192, 0.15);;
+    background-color: rgba(70, 88, 192, 0.15);
     &__left-block {
         display: flex;
         justify-content: space-between;
@@ -23,12 +23,65 @@ h1 {
         display: flex;
         align-items: center;
     }
-    &__link {
-        position: relative;
-        margin-right: 45px;
+
+    &__drop {
+        width: 90px;
         font-weight: bold;
         font-size: 18px;
         color: $dark;
+        transition: 0.2s all;
+        &:hover {
+            color:rgb(65, 90, 235);
+           
+            &:after {
+                content: '';
+                position: absolute;
+                display: block;
+                width: 100%;
+                bottom: -1px;
+                z-index: -1;
+                height: 2px;
+                background: $red;
+            }
+        }
+    }
+
+    &__drop-a {
+        font-weight: bold;
+        font-size: 18px;
+        color: $dark;
+        width: 90px;
+        height: 40px;
+        text-align: left;
+        padding-top: 20px;
+        transition: 0.2s all;
+        color:rgb(65, 90, 235);
+        &:hover {
+            color:rgb(65, 90, 235);
+           
+            &:after {
+                content: '';
+                position: absolute;
+                display: block;
+                width: 100%;
+                bottom: -1px;
+                z-index: -1;
+                height: 2px;
+                background: $red;
+            }
+        }
+        
+        
+    }    
+
+
+    &__link {
+        position: relative;
+        margin-right: 85px;
+        font-weight: bold;
+        font-size: 18px;
+        color: $dark;
+        transition: 0.2s all;
 
         i {
             color: $dark;

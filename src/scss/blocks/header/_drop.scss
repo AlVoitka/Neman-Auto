@@ -1,0 +1,23 @@
+.menu {
+    display: flex;
+}
+
+.menu li {
+    width: 63px;
+    list-style: none;
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    display: block;
+}
+
+.menu ul {
+    position: absolute;
+    display: none;
+}
+
+.menu li:hover ul {
+    display: block;
+}
