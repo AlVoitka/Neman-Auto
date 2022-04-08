@@ -1,0 +1,33 @@
+.aboutAs {
+    &__wrp {
+        height: 600px;
+        display: flex;
+    }
+    &__item1 {
+        height: 600px;
+        width: 50%;
+        background: url('/src/scss/blocks/main/aboutAs/2020-scania.jpg') center center/cover no-repeat;
+    }
+    &__item2 {
+        height: 600px;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__box {
+        height: 300px;
+        width: 300px;
+    }
+    &__header {
+        font-size: 40px;
+        text-align: center;
+    }
+    &__descr {
+        font-size: 28px;
+        font-weight: normal;
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+}

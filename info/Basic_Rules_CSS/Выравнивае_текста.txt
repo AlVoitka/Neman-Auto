@@ -1,0 +1,20 @@
+1.По центру блока: 
+
+text-align: center;  ---- ставит в центр по горизонтали
+
+padding-top: 135px;  ---- так опускаю текст на нужное значение
+line-height: 100px;  ---- также выравнивает по вертикали на нужное значение
+
+2. Если блок обернуть в div то тогда:
+
+display: inline-block;
+vertical-align: middle;
+
+или
+
+display: flex; 
+margin: 0 auto;
+
+3.  text-transform: uppercase;  --- Все буквы в верхний регистр
+    font-weight: normal;  --- толщина шрифта
+

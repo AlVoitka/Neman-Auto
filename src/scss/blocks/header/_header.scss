@@ -28,10 +28,10 @@ h1 {
         width: 90px;
         font-weight: bold;
         font-size: 18px;
-        color: $dark;
+        color: rgba(227, 247, 52,0.8);
         transition: 0.2s all;
         &:hover {
-            color:rgb(65, 90, 235);
+            color: rgba(236, 97, 108,0.8);
            
             &:after {
                 content: '';
@@ -49,15 +49,14 @@ h1 {
     &__drop-a {
         font-weight: bold;
         font-size: 18px;
-        color: $dark;
         width: 90px;
         height: 40px;
         text-align: left;
         padding-top: 20px;
         transition: 0.2s all;
-        color:rgb(65, 90, 235);
+        color: rgba(227, 247, 52,0.8);
         &:hover {
-            color:rgb(65, 90, 235);
+            color: rgba(227, 247, 52,0.8);
            
             &:after {
                 content: '';
@@ -80,8 +79,8 @@ h1 {
         margin-right: 85px;
         font-weight: bold;
         font-size: 18px;
-        color: $dark;
         transition: 0.2s all;
+        color: rgba(227, 247, 52,0.8);
 
         i {
             color: $dark;
@@ -107,7 +106,7 @@ h1 {
             
         }
         &:hover {
-            color:rgb(65, 90, 235);
+            color: rgba(236, 97, 108,0.8);
            
             &:after {
                 content: '';

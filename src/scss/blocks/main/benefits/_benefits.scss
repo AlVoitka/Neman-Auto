@@ -1,0 +1,22 @@
+.benefits {
+    background: linear-gradient(to right, rgb(226, 229, 243), rgb(190, 193, 211));
+    &__wrp {
+        height: 300px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item {
+        height: 150px;
+        width: 400px;
+        text-align: center;
+        border: 3px solid rgba(70, 88, 192, 0.15);
+        border-radius: 25px;
+        background-color: #fff;
+        img {
+            margin-top: 10px;
+        }
+    }
+    h4 {
+        margin-top: 20px;
+    }
+}

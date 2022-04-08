@@ -1,0 +1,80 @@
+1.Классическая верстка 
+
+<form class="feed-form" action="#">
+    <input name="name" required placeholder="Name" type="text" maxlength="10">
+    <input name="phone" required placeholder="Phone number" type="number" minlength="3">
+    <input name="email" required placeholder="e-mail" type="email">
+
+    <button class="btn">consult</button>
+</form>
+
+Валидация форм 
+1. первый уровень:
+Значения свойств:
+
+-name="name"  - обязательно задавать этот атрибут, он очень важен для корректной работы формы
+
+- required - Устанавливает поле формы обязательным для заполнения перед отправкой формы на сервер. Если обязательное поле пустое, браузер выведет сообщение, а форма отправлена не будет. Вид и содержание сообщения
+ зависит от браузера и меняться пользователем не может.
+
+- type="button|checkbox|file|hidden|image|password|radio|reset|submit|text"  - нужно указывать тот тип который будет приходить от юзера
+http://htmlbook.ru/html/input/type  - тут описание
+
+- placeholder  -Выводит текст внутри поля формы, который исчезает при получении фокуса.
+
+-maxlength="10" - Устанавливает максимальное число символов, которое может быть введено пользователем в текстовом поле. 
+Когда это количество достигается при наборе, дальнейший ввод становится невозможным.
+
+-minlength="3" - Задаёт минимальное число символов, которое может быть введено пользователем в текстовом поле. 
+Если число символов меньше указанного значения, то браузер выдаёт сообщение об ошибке и не отправляет форму.
+
+2. Второй уровень, это проверки при помощи JavaScript
+
+3. И еще есть такой плагин Query Validation Plugin  - https://jqueryvalidation.org/  1 курс -урок 60
+тут как сделать чтобы появлялись подсказки и при ошибке открашивалаь красным форма
+
+4. Плагин для создания маски набора номера jQuery Masked Input - https://plugins.jquery.com/maskedinput/ 1 курс -урок 61
+
+
+/////////Чекбоксы/////////////
+
+<form method="post" action="input5.php">
+    <p><b>С какими операционными системами вы знакомы?</b></p>
+    <p><input type="checkbox" name="option1" value="a1" checked>Windows 95/98<Br>
+    <input type="checkbox" name="option2" value="a2">Windows 2000<Br>
+    <input type="checkbox" name="option3" value="a3">System X<Br> 
+    <input type="checkbox" name="option4" value="a4">Linux<Br> 
+    <input type="checkbox" name="option5" value="a5">X3-DOS</p>
+    <p><input type="submit" value="Отправить"></p>
+</form>
+
+
+/////// И ещё много разных форм бывает//////////////////
+весь список тут http://htmlbook.ru/html/input/type
+
+<form action="#">
+    <label for="Year">Year</label>
+    <input id="Year" type="checkbox">
+</form>
+
+<form action="#">
+    <input type="file">  ---- это для выбора файла для подкрепления
+</form>
+
+<form action="#">
+    <input type="date">
+</form>
+
+<form action="#">
+    <input type="range">  --- это ползунок
+</form>
+
+<form action="#">
+    <label for="first">Name</label>
+    <input id="first" type="range">
+</form>
+<br>
+<br>
+<form action="#">
+    <textarea name="" id="" cols="30" rows="10"></textarea>   --- это поле для ввода сообщения или отзыва
+</form>

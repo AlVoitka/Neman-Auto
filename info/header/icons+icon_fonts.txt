@@ -4,7 +4,9 @@
 
 
 
-2.  https://fontawesome.com/  - v.superalex@gmail.com  --- 500sel500
+2. иконочные шрифты
+
+https://fontawesome.com/  - v.superalex@gmail.com  --- 500sel500
 
 ---Захожу на сайт https://cdnjs.com/libraries/font-awesome
 ---При необходимости ищу /font-awesome

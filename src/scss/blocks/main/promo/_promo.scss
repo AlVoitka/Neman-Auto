@@ -1,0 +1,21 @@
+.promo {
+    min-height: 881px;
+    background: url('/src/img/road.jpg') center center/cover no-repeat;
+    h2 {
+        font-size: 70px;
+        text-align: center;
+        padding-top: 135px;
+        color: rgba(227, 247, 52,0.8);
+    }
+    h3 {
+        font-size: 50px;
+        text-align: center;
+        padding-top: 150px;
+        color: rgba(236, 97, 108,1);
+    }
+    
+}
+
+.wrapper {
+    min-height: 600px;
+}

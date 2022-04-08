@@ -47,26 +47,23 @@ a {
   background-color: #415aeb;
 }
 
-.main {
-  height: 2000px;
-  background-color: rgba(65, 90, 235, 0.2);
-}
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.divider {
-  width: 330px;
-  height: 1px;
-  margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
 .title {
   font-size: 36px;
   font-weight: 400;
+}
+
+hr {
+  margin: 0 auto;
+  width: 30%;
+  margin-top: 20px;
+  height: 5px;
+  border: none;
+  background-color: aqua;
 }
 
 h1 {
@@ -101,12 +98,12 @@ h1 {
   width: 90px;
   font-weight: bold;
   font-size: 18px;
-  color: #303030;
+  color: rgba(227, 247, 52, 0.8);
   transition: 0.2s all;
 }
 
 .header__drop:hover {
-  color: #415aeb;
+  color: rgba(236, 97, 108, 0.8);
 }
 
 .header__drop:hover:after {
@@ -123,17 +120,16 @@ h1 {
 .header__drop-a {
   font-weight: bold;
   font-size: 18px;
-  color: #303030;
   width: 90px;
   height: 40px;
   text-align: left;
   padding-top: 20px;
   transition: 0.2s all;
-  color: #415aeb;
+  color: rgba(227, 247, 52, 0.8);
 }
 
 .header__drop-a:hover {
-  color: #415aeb;
+  color: rgba(227, 247, 52, 0.8);
 }
 
 .header__drop-a:hover:after {
@@ -152,8 +148,8 @@ h1 {
   margin-right: 85px;
   font-weight: bold;
   font-size: 18px;
-  color: #303030;
   transition: 0.2s all;
+  color: rgba(227, 247, 52, 0.8);
 }
 
 .header__link i {
@@ -178,7 +174,7 @@ h1 {
 }
 
 .header__link:hover {
-  color: #415aeb;
+  color: rgba(236, 97, 108, 0.8);
 }
 
 .header__link:hover:after {
@@ -224,5 +220,185 @@ h1 {
   position: sticky;
   top: 0;
   background: linear-gradient(to right, #b0b8e6, #71779b);
+}
+
+.promo {
+  min-height: 881px;
+  background: url("/src/img/road.jpg") center center/cover no-repeat;
+}
+
+.promo h2 {
+  font-size: 70px;
+  text-align: center;
+  padding-top: 135px;
+  color: rgba(227, 247, 52, 0.8);
+}
+
+.promo h3 {
+  font-size: 50px;
+  text-align: center;
+  padding-top: 150px;
+  color: #ec616c;
+}
+
+.wrapper {
+  min-height: 600px;
+}
+
+.divider {
+  height: 150px;
+  color: white;
+  padding: 50px 0px 50px 0px;
+}
+
+.divider__stripe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.aboutAs__wrp {
+  height: 600px;
+  display: flex;
+}
+
+.aboutAs__item1 {
+  height: 600px;
+  width: 50%;
+  background: url("/src/scss/blocks/main/aboutAs/2020-scania.jpg") center center/cover no-repeat;
+}
+
+.aboutAs__item2 {
+  height: 600px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutAs__box {
+  height: 300px;
+  width: 300px;
+}
+
+.aboutAs__header {
+  font-size: 40px;
+  text-align: center;
+}
+
+.aboutAs__descr {
+  font-size: 28px;
+  font-weight: normal;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.service {
+  background: linear-gradient(to right, #e2e5f3, #bec1d3);
+}
+
+.service__wrp {
+  height: 1200px;
+  background-color: grey;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.service__item {
+  height: 400px;
+  width: 600px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service__item-box {
+  height: 150px;
+  width: 250px;
+  text-align: center;
+}
+
+.service__item-box h2 {
+  font-size: 40px;
+}
+
+.service__item-box h3 {
+  margin-top: 20px;
+  font-weight: normal;
+  font-size: 28px;
+}
+
+.service .one {
+  background: url("/src/scss/blocks/main/service/spedition.jpg") center center/cover no-repeat;
+}
+
+.service .four {
+  background: url("/src/scss/blocks/main/service/clear.png") center center/cover no-repeat;
+}
+
+.service .five {
+  background: url("/src/scss/blocks/main/service/drive.jpg") center center/cover no-repeat;
+}
+
+.benefits {
+  background: linear-gradient(to right, #e2e5f3, #bec1d3);
+}
+
+.benefits__wrp {
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.benefits__item {
+  height: 150px;
+  width: 400px;
+  text-align: center;
+  border: 3px solid rgba(70, 88, 192, 0.15);
+  border-radius: 25px;
+  background-color: #fff;
+}
+
+.benefits__item img {
+  margin-top: 10px;
+}
+
+.benefits h4 {
+  margin-top: 20px;
+}
+
+.consultation {
+  background: url("/src/img/road_2.jpg") center center/cover no-repeat;
+  height: 400px;
+}
+
+.consultation__title {
+  color: #FFFFFF;
+  padding: 10px 0 20px 0px;
+}
+
+.consultation__descr {
+  color: #FFFFFF;
+  padding: 0 0 20px 0;
+}
+
+.feed-form {
+  display: flex;
+  flex-direction: column;
+  width: 303px;
+}
+
+.feed-form input {
+  height: 54px;
+  background: #FFFFFF;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: none;
+  padding: 0 20px;
+  color: #4b4b4b;
+  font-size: 14px;
 }
 /*# sourceMappingURL=style.css.map */

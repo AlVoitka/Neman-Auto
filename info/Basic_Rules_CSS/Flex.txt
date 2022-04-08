@@ -1,0 +1,11 @@
+
+1. Выравнивает блок в центр по вертикали и горизонтали
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+2. Флексы не наслаиваются , а переносятся вних на свободные места
+
+    display: flex;      
+    flex-wrap: wrap;

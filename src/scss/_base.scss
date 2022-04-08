@@ -46,25 +46,25 @@ a {
     
 }
 
-.main {
-    height: 2000px;
-    background-color: rgba(65, 90, 235, 0.2);
-}
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.divider {
-    width: 330px;
-    height: 1px;
-    margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.5);;
-}
+
 
 .title {
     font-size: 36px;
     font-weight: 400;
+}
+
+hr {
+    margin: 0 auto;
+    width: 30%;
+    margin-top: 20px;
+    height: 5px;
+    border: none;
+    background-color: aqua;
 }
 

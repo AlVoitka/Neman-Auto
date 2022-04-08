@@ -5,3 +5,13 @@ i {
     justify-content: center;
     align-items: center;
 }
+
+2. С div тоже самое:
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+3. img тоже сдвигает в центр:
+
+text-align: center;

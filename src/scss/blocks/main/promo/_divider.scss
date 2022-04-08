@@ -1,0 +1,14 @@
+.divider {
+    height: 150px;
+    color: white;
+    padding:  50px 0px 50px 0px;
+    
+    
+    &__stripe {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}

@@ -1,0 +1,31 @@
+.consultation {
+    background: url('/src/img/road_2.jpg') center center/cover no-repeat;
+    height: 400px;
+    &__title {
+        color: #FFFFFF;
+        padding: 10px 0 20px 0px;
+    }
+    &__descr {
+        color: #FFFFFF;
+        padding: 0 0 20px 0;
+    }
+}
+
+.feed-form {
+    display: flex;
+    flex-direction: column;
+    width: 303px;
+    input {
+        height: 54px;
+        background: #FFFFFF;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border:none;
+        padding: 0 20px;
+        color: #4b4b4b;
+        font-size: 14px;
+       
+    }
+    
+
+}

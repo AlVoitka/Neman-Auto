@@ -1,0 +1,40 @@
+.service {
+    background: linear-gradient(to right, rgb(226, 229, 243), rgb(190, 193, 211));
+    &__wrp {
+        height: 1200px;
+        background-color: grey;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item {
+        height: 400px;
+        width: 600px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__item-box {
+        height: 150px;
+        width: 250px;
+        text-align: center;
+        h2 {
+            font-size: 40px;
+        }
+        h3 {
+            margin-top: 20px;
+            font-weight: normal;
+            font-size: 28px;
+        }
+    }
+.one {
+    background: url('/src/scss/blocks/main/service/spedition.jpg') center center/cover no-repeat;
+
+} 
+.four {
+    background: url('/src/scss/blocks/main/service/clear.png') center center/cover no-repeat;
+} 
+.five {
+    background: url('/src/scss/blocks/main/service/drive.jpg') center center/cover no-repeat;
+}  
+}
