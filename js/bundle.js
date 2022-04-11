@@ -1,32 +1,61 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/js/modules/dropdown.js":
+/***/ "./src/js/modules/downslider.js":
+/*!**************************************!*\
+  !*** ./src/js/modules/downslider.js ***!
+  \**************************************/
+/***/ ((module) => {
+
+function downslider() {
+    
+    $(document).ready(function(){
+        $('.myslider__downslider').slick({
+            dots: false,
+            arrows: true,
+            infinite: true,
+            autoplay: true, 
+            autoplaySpeed: 2000,
+            speed: 1000,
+            fade: true,
+            cssEase: 'linear',
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            prevArrow: '<button type="button" class="slick-prev"><img src="./img/left-arrow.svg"></button>',
+            nextArrow: '<button type="button" class="slick-next"><img src="./img/right-arrow.svg"></button>',
+          });
+    });
+    
+}
+
+module.exports = downslider;
+
+/***/ }),
+
+/***/ "./src/js/modules/upslider.js":
 /*!************************************!*\
-  !*** ./src/js/modules/dropdown.js ***!
+  !*** ./src/js/modules/upslider.js ***!
   \************************************/
 /***/ ((module) => {
 
-function dropdown() {
+function upslider() {
     
-    document.getElementById("myDropdown").classList.toggle("show");
-      
+    $(document).ready(function(){
+        $('.myslider__upslider').slick({
+            dots: false,
+            arrows: false,
+            infinite: true,
+            autoplay: true, 
+            autoplaySpeed: 2000,
+            speed: 1000,
+            fade: true,
+            cssEase: 'linear',
+          });
+    });
     
-    window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn')) {
-          var dropdowns = document.getElementsByClassName("dropdown-content");
-          var i;
-          for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-              openDropdown.classList.remove('show');
-            }
-          }
-        }
-      }
 }
 
-module.exports = dropdown;
+module.exports = upslider;
 
 /***/ })
 
@@ -65,10 +94,12 @@ var __webpack_exports__ = {};
   \**************************/
 
 window.addEventListener('DOMContentLoaded', function() {
-    const dropdown = __webpack_require__(/*! ./modules/dropdown */ "./src/js/modules/dropdown.js");
+    const upslider = __webpack_require__(/*! ./modules/upslider */ "./src/js/modules/upslider.js"),
+          downslider =__webpack_require__(/*! ./modules/downslider */ "./src/js/modules/downslider.js");
           
-    dropdown();
-   
+
+    upslider();
+    downslider();
 });
 })();
 

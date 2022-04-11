@@ -1,3 +1,6 @@
+http://css.yoksel.ru/flexbox/
+https://tproger.ru/translations/how-css-flexbox-works/
+
 
 1. Выравнивает блок в центр по вертикали и горизонтали
 

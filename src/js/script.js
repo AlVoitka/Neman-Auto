@@ -1,7 +1,9 @@
 
 window.addEventListener('DOMContentLoaded', function() {
-    const dropdown = require('./modules/dropdown');
+    const upslider = require('./modules/upslider'),
+          downslider =require('./modules/downslider');
           
-    dropdown();
-   
+
+    upslider();
+    downslider();
 });

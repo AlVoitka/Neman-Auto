@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Neman-Auto</title>
@@ -68,7 +69,19 @@
         <section class="aboutAs">
             <div class="container">
                 <div class="aboutAs__wrp">
-                    <div class="aboutAs__item1"></div>
+                    <div class="aboutAs__item1">
+                        <div class="myslider__upslider">
+                            <div>
+                                <img src="/src/scss/blocks/main/aboutAs/look.com.ua-102883.jpg" alt="1">
+                            </div>
+                            <div>
+                                <img src="/src/scss/blocks/main/aboutAs/man_trucks_030415.jpg" alt="2">
+                            </div>
+                            <div>
+                                <img src="/src/scss/blocks/main/aboutAs/2020-scania.jpg" alt="3">
+                            </div>
+                        </div>
+                    </div>
                     <div class="aboutAs__item2">
                         <div class="aboutAs__box">
                             <h3 class="aboutAs__header">About as</h3>
@@ -184,13 +197,76 @@
             </div>
         </div>
 
+        <section class="myslider">
+            <div class="container">
+                <div class="myslider__downslider">
+                    <div>
+                        <img src="img/1.jpg" alt="1">
+                    </div>
+                    <div>
+                        <img src="img/2.jpg" alt="2">
+                    </div>
+                    <div>
+                        <img src="img/3.jpg" alt="3">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-
+        <div class="divider">
+            <div class="divider__stripe">
+                <h2 class="divider__h2">Why we?</h2>
+            </div>
+        </div>
 
     </main>
 
-    
-    <script src="https://kit.fontawesome.com/ef1062ba9e.js" crossorigin="anonymous"></script> 
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__descr">
+                    <h2>Neman-Auto LLC</h2>
+                    <h3>Marywilska 44, 03-046 Warszawa</h3>
+                    <h4>Phone: +48 733 755 715<br>E-mail: info@trio-trans.eu</h4> 
+                </div>
+
+                <div class="footer__map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2438.725575209616!2d21.00495313474426!3d52.320981994034696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x91f17260eb2c1754!2sPlac%20manewrowy%20OSK%20Piero!5e0!3m2!1sru!2sby!4v1649668893715!5m2!1sru!2sby" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <div class="footer__info">
+                    <address class="footer__addr">Marywilska 44, 03-046 Warszawa</address>
+                    <a class="footer__phone" href="tel:48999228974">+48 733 755 715</a>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-item"><img src="" alt="facebook"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="basement">
+            <div class="basement__logo">Neman-Auto LLC</div>
+            <div class="basement__made">© 2022 Neman-Auto LLC</div>
+            <div class="basement__social">
+                <div class="basement__social">
+                    <div class="basement__social-box">
+                        <a href="#" class="basement__social-item"><img src="/src/img/facebook.svg" alt="facebook"></a>
+                    </div>
+                    <div class="basement__social-box">
+                        <a href="#" class="basement__social-item"><img src="/src/img/instagm.svg" alt="instagram"></a>
+                    </div>
+                    <div class="basement__social-box">
+                        <a href="#" class="basement__social-item"><img src="/src/img/telegram.svg" alt="telegram"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/ef1062ba9e.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./js/slick.min.js"></script> 
     <script src="../js/bundle.js"></script>
 </body>
 </html>
