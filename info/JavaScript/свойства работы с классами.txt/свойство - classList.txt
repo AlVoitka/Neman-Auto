@@ -1,0 +1,8 @@
+Свойство classList возвращает псевдомассив DOMTokenList, содержащий все классы элемента.
+
+Синтаксис
+const elementClasses = elem.classList;
+Результат - псевдомассив DOMTokenList, содержащий все классы узла elem
+
+.classList.remove('benefits__img-active');  --- удаляет выбранный класс
+.classList.add('benefits__img-active');   ---- добавляет выбранный класс

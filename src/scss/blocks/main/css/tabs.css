@@ -1,0 +1,81 @@
+.benefits {
+  background-color: #fff;
+}
+
+.benefits__wrp {
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.benefits__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100px;
+  height: 500px;
+  border: 3px solid rgba(70, 88, 192, 0.15);
+  border-radius: 25px;
+  background-color: #fff;
+}
+
+.benefits__box {
+  display: block;
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+  transition: 0.1s all;
+}
+
+.benefits__box:hover {
+  width: 75px;
+  height: 75px;
+}
+
+.benefits__box img {
+  max-width: 90%;
+  max-height: 90%;
+  cursor: pointer;
+}
+
+.benefits__img-active {
+  background-color: #7977eb;
+  border-radius: 10px;
+}
+
+.benefits__l-box {
+  height: 500px;
+  width: 1000px;
+  text-align: center;
+  border: -5px solid rgba(70, 88, 192, 0.15);
+  border-radius: 25px;
+  background-color: #fff;
+}
+
+.benefits__tabcontent {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+}
+
+.benefits__tabcontent img {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.benefits__item {
+  display: block;
+  margin: 0 auto;
+  padding-top: 20px;
+  height: 200px;
+  width: 200px;
+  background-color: #fff;
+}
+
+.benefits h4 {
+  color: #5a35e0;
+  font-size: 30px;
+  margin-top: 20px;
+}
+/*# sourceMappingURL=tabs.css.map */
