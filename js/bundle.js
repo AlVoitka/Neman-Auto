@@ -29,6 +29,36 @@ module.exports = downslider;
 
 /***/ }),
 
+/***/ "./src/js/modules/scrollUP.js":
+/*!************************************!*\
+  !*** ./src/js/modules/scrollUP.js ***!
+  \************************************/
+/***/ ((module) => {
+
+function scrollUP() {
+
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 1900) {
+          $('.scroll-up').fadeIn();
+        } else {
+          $('.scroll-up').fadeOut();
+        }
+      });
+      
+
+    $("a[href^='#']").click(function(){
+    const _href = $(this).attr("href");
+    $("html,body").animate({scrollTop:$(_href).offset().top+"px"});
+    return false;
+    });
+
+}
+
+module.exports = scrollUP;
+
+/***/ }),
+
 /***/ "./src/js/modules/tabs.js":
 /*!********************************!*\
   !*** ./src/js/modules/tabs.js ***!
@@ -151,12 +181,15 @@ var __webpack_exports__ = {};
 window.addEventListener('DOMContentLoaded', function() {
     const upslider = __webpack_require__(/*! ./modules/upslider */ "./src/js/modules/upslider.js"),
           downslider =__webpack_require__(/*! ./modules/downslider */ "./src/js/modules/downslider.js"),
-          tabs =__webpack_require__(/*! ./modules/tabs */ "./src/js/modules/tabs.js")
+          tabs =__webpack_require__(/*! ./modules/tabs */ "./src/js/modules/tabs.js"),
+          scrollUP =__webpack_require__(/*! ./modules/scrollUP */ "./src/js/modules/scrollUP.js")
           
 
     upslider();
     downslider();
     tabs();
+    scrollUP();
+    
 });
 })();
 

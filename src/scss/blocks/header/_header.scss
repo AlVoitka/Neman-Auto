@@ -44,6 +44,19 @@ h1 {
                 background: $red;
             }
         }
+        &::before {
+            content: '';
+            position: absolute;
+            border: solid #303030;
+            border-width: 0 2px 2px 0;
+            display: block;
+            padding: 3px;
+            transform: rotate(45deg);
+            bottom: 7px;
+            right: -16px;
+            z-index: -1;
+            color: rgba(227, 247, 52,0.8);
+        }
     }
 
     &__drop-a {
@@ -71,12 +84,13 @@ h1 {
         }
         
         
+        
     }    
 
 
     &__link {
         position: relative;
-        margin-right: 85px;
+        margin-right: 80px;
         font-weight: bold;
         font-size: 18px;
         transition: 0.2s all;
@@ -86,7 +100,7 @@ h1 {
             color: $dark;
         }
 
-        &:nth-child(4) {
+        &:nth-child(8) {
             &::before {
                 content: '';
                 position: absolute;

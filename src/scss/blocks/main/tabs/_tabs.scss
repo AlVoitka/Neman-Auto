@@ -9,48 +9,55 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        align-items: center;
         width: 100px;
         height: 500px;
-        border: 3px solid rgba(70, 88, 192, 0.15);
+        border: 3px solid rgb(121, 119, 235);
         border-radius: 25px;
         background-color: #fff;
     }
     &__box {
-        display: block;
-        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 60px;
         height: 60px;
         transition: 0.1s all;
         &:hover {
-            width: 75px;
-            height: 75px;
+            width: 85px;
+            height: 85px;
                 
         }
         img {
-            max-width: 90%; 
-            max-height: 90%;
+            
+            max-width: 70%; 
+            max-height: 70%;
             cursor: pointer;
         }
     }
 
     &__img-active {
         background-color: rgb(121, 119, 235);
-        border-radius: 10px;
+        border-radius: 5px;
         
     }
 
     &__l-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 500px;
         width: 1000px;
         text-align: center;
-        border: -5px solid rgba(70, 88, 192, 0.15);
+        border: 3px solid rgb(121, 119, 235);;
         border-radius: 25px;
         background-color: #fff;
     }
 
     &__tabcontent {
-        display: block;
-        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 300px;
         height: 300px;
         img {
@@ -71,6 +78,6 @@
     h4 {
         color: rgb(90, 53, 224);
         font-size: 30px;
-        margin-top: 20px;
+        padding-bottom: 30px;
     }
 }

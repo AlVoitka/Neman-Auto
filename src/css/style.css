@@ -117,6 +117,20 @@ h1 {
   background: red;
 }
 
+.header__drop::before {
+  content: '';
+  position: absolute;
+  border: solid #303030;
+  border-width: 0 2px 2px 0;
+  display: block;
+  padding: 3px;
+  transform: rotate(45deg);
+  bottom: 7px;
+  right: -16px;
+  z-index: -1;
+  color: rgba(227, 247, 52, 0.8);
+}
+
 .header__drop-a {
   font-weight: bold;
   font-size: 18px;
@@ -145,7 +159,7 @@ h1 {
 
 .header__link {
   position: relative;
-  margin-right: 85px;
+  margin-right: 80px;
   font-weight: bold;
   font-size: 18px;
   transition: 0.2s all;
@@ -156,7 +170,7 @@ h1 {
   color: #303030;
 }
 
-.header__link:nth-child(4)::before {
+.header__link:nth-child(8)::before {
   content: '';
   position: absolute;
   border: solid #303030;
@@ -169,7 +183,7 @@ h1 {
   z-index: -1;
 }
 
-.header__link:nth-child(4):hover {
+.header__link:nth-child(8):hover {
   color: #c1e424;
 }
 
@@ -337,7 +351,7 @@ h1 {
 }
 
 .service .four {
-  background: url("/src/scss/blocks/main/service/clear.png") center center/cover no-repeat;
+  background: url("/src/scss/blocks/main/service/ecology-3.jpg") center center/cover no-repeat;
 }
 
 .service .five {
@@ -358,49 +372,55 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
   width: 100px;
   height: 500px;
-  border: 3px solid rgba(70, 88, 192, 0.15);
+  border: 3px solid #7977eb;
   border-radius: 25px;
   background-color: #fff;
 }
 
 .benefits__box {
-  display: block;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 60px;
   height: 60px;
   transition: 0.1s all;
 }
 
 .benefits__box:hover {
-  width: 75px;
-  height: 75px;
+  width: 85px;
+  height: 85px;
 }
 
 .benefits__box img {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 70%;
+  max-height: 70%;
   cursor: pointer;
 }
 
 .benefits__img-active {
   background-color: #7977eb;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .benefits__l-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 500px;
   width: 1000px;
   text-align: center;
-  border: -5px solid rgba(70, 88, 192, 0.15);
+  border: 3px solid #7977eb;
   border-radius: 25px;
   background-color: #fff;
 }
 
 .benefits__tabcontent {
-  display: block;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 300px;
   height: 300px;
 }
@@ -422,7 +442,7 @@ h1 {
 .benefits h4 {
   color: #5a35e0;
   font-size: 30px;
-  margin-top: 20px;
+  padding-bottom: 30px;
 }
 
 .consultation {
@@ -613,5 +633,18 @@ h1 {
   height: auto;
   margin: auto;
   padding: 5px;
+}
+
+.scroll-up {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+}
+
+.scroll-up img {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
