@@ -66,6 +66,19 @@ hr {
   background-color: aqua;
 }
 
+@keyframes up-arrow {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+    border-color: red;
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
 h1 {
   color: #415aeb;
 }
@@ -567,17 +580,21 @@ h1 {
 
 .footer h2 {
   text-align: center;
-  padding-top: 100px;
+  padding-top: 90px;
+  font-size: 45px;
+  color: #1a73e8;
 }
 
 .footer h3 {
   text-align: center;
   margin-top: 50px;
+  color: #1a73e8;
 }
 
 .footer h4 {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 22px;
+  color: #1a73e8;
 }
 
 .footer__info {
@@ -646,5 +663,16 @@ h1 {
 
 .scroll-up img {
   width: 100%;
+}
+
+.scroll-up__animated {
+  animation-name: up-arrow;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 2;
+}
+
+.scroll-up__animated:hover {
+  animation-play-state: paused;
 }
 /*# sourceMappingURL=style.css.map */

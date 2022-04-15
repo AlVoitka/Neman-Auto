@@ -8,5 +8,14 @@
     img {
         width: 100%;
     }
+    &__animated {
+        animation-name: up-arrow;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+        animation-iteration-count: 2;
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
 
 }

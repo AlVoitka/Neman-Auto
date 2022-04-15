@@ -1,0 +1,9 @@
+https://itchief.ru/javascript/get-elements
+
+Метод querySelectorAll() Document возвращает статический (не динамический) NodeList,
+ содержащий все найденные элементы документа, которые соответствуют указанному селектору.
+
+const tabs = document.querySelectorAll('.benefits__img') - получил все элемент по классу .benefits__img
+и создаст псевдомассив из них
+
+console.log(tabs[3]) -выведет четвертый элемент по порядку

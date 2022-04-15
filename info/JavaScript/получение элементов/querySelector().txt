@@ -1,0 +1,7 @@
+https://itchief.ru/javascript/get-elements
+
+Document метод querySelector() возвращает первый элемент (Element) документа, который соответствует 
+указанному селектору или группе селекторов. Если совпадений не найдено, возвращает значение null.
+
+Синтаксис
+element = document.querySelector(selectors);

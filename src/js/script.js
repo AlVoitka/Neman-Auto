@@ -11,4 +11,6 @@ window.addEventListener('DOMContentLoaded', function() {
     tabs();
     scrollUP();
     
+
+    new WOW().init();
 });
