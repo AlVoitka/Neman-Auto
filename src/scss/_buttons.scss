@@ -1,0 +1,58 @@
+@mixin btn_hover {
+    &:hover {
+        color:black;
+        border: 2px solid rgb(9, 24, 107);
+        background-color:rgb(65, 90, 235);
+    }
+}
+
+
+.btn {
+    width: 303px;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s all;
+    outline: none;
+    @include btn_hover;
+
+    &_header {
+        width: 200px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        font-size: 15px;
+        font-weight: bold;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+        cursor: pointer;
+        transition: 0.3s all;
+        outline: none;
+        @include btn_hover;
+    }
+    
+    &_modal {
+        font-size: 15px;
+        font-weight: bold;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+        cursor: pointer;
+        transition: 0.3s all;
+        outline: none;
+        width: 303px;
+        height: 54px;
+        @include btn_hover;
+    }
+}

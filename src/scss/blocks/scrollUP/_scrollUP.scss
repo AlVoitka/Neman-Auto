@@ -19,3 +19,25 @@
     }
 
 }
+
+.scroll-down {
+    display: block;
+    margin: 0 auto;
+    margin-top: 25%;
+    right: 50%;
+    width: 50px;
+    height: 50px;
+    img {
+        width: 100%;
+    }
+    &__animated {
+        animation-name: up-arrow;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+        animation-iteration-count: 2;
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
+}
+

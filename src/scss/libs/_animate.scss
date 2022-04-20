@@ -3874,6 +3874,7 @@
 .animate__slideInDown {
   -webkit-animation-name: slideInDown;
   animation-name: slideInDown;
+  animation-timing-function: ease-in-out;
 }
 @-webkit-keyframes slideInLeft {
   from {

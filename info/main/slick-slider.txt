@@ -269,24 +269,36 @@ nextArrow: '<button type="button" class="slick-next"><img src="./img/right-arrow
 
             
             
-5. Мобильная адаптация
+5.  ///////////////////////   Мобильная адаптация  ///////////////////////////
 
-свойство   responsive
-        breakpoint: 768, (правило работает от 0 до 768  - это классическая граница переходо ит малых экранов компов на планшетные и мобильные версии)
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,  описание эти хывше есть
-          infinite: true,
-          dots: true
-        }  
+responsive: [
 
-        responsive: [
-          {
-            breakpoint: 992,
-            settings: {
-              dots: true,    включает точки
-              arrows: false,   выключает кнопки перемотки
-            }
-          },
-        ]
--->
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 2,
+                        arrows: false
+                    }
+                },
+
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        arrows: false
+                    }
+                },
+
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false
+                    }
+                },
+
+            ]
+

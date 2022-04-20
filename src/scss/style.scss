@@ -1,6 +1,10 @@
+@import './libs/animate';
+
 @import './variables';
 @import './base';
 @import './animations';
+@import './buttons';
+
 
 @import './blocks/header/header';
 @import './blocks/header/drop';
@@ -16,6 +20,12 @@
 @import './blocks/footer/footer';
 @import './blocks/footer/basement';
 @import './blocks/scrollUP/scrollUP';
+@import './blocks/modal/modal';
+
+
+
+
+@import './media';
 
 
 

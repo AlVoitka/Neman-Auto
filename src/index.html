@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/src/img/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Neman-Auto</title>
@@ -14,9 +14,9 @@
     
     <section class="sticky">
 
-            <header class="header">
+            <header class="header" id="media_2">
         
-                <div class="header__left-block">
+                <div class="header__left-block" id="media_1">
                     <div class="header__logo">
                         <a href="">
                             <h1>Neman-Auto</h1>
@@ -47,7 +47,7 @@
                 </div>
                 
                 <div class="header__right-block">
-                    <button class="btn btn_header">connect with us</button>
+                    <button  class="btn_header">connect with us</button>
                 </div>
         
             </header>
@@ -64,6 +64,11 @@
                     <h3 class="animate__animated wow animate__backInLeft" data-wow-duration="3s" data-wow-delay="1.5s">
                         We offer a wide range of transport services throughout Europe
                     </h3>
+                    <a href="#down" class="scroll-down wow animate__animated animate__slideInDown"data-wow-iteration="2" data-wow-duration="2s" data-wow-delay="3s">
+                        <img src="/src/scss/blocks/scrollUP/down-arrow.svg" alt="up">
+                    </a>
+
+
                 </div>
             </div>
         </section>
@@ -216,7 +221,7 @@
         <section class="consultation">
             <div class="container">
     
-                <h2 class="consultation__title">GET A FREE CONSULTATION</h2>
+                <h2 class="consultation__title">Feedback</h2>
                 <div class="consultation__descr">Just fill out the form</div>
     
                 <form class="feed-form" action="#">
@@ -224,7 +229,7 @@
                     <input name="phone" required placeholder="Phone number" type="number">
                     <input name="email" required placeholder="e-mail" type="email">
     
-                    <button class="btn">consult</button>
+                    <button  class="btn">contact</button>
                 </form>
     
             </div>
@@ -311,6 +316,29 @@
     </footer>
 
     <a href="#up" class="scroll-up scroll-up__animated"><img src="/src/scss/blocks/scrollUP/up-arrow.svg" alt="up"></a>
+
+    <div class="overlay"> 
+
+        <div class="modal" id="consult"> 
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">GET A FREE CONSULTATION</div>
+            <div class="modal__descr">Just fill out the form</div>
+            <form class="feed-form" action="#"> 
+                <input name="name" required placeholder="Name" type="text">
+                <input name="phone" required placeholder="Phone" type="number">
+                <input name="email" required placeholder="E-mail" type="email">
+
+                <button class="btn_modal">book a consultation</button>
+            </form>
+        </div>
+
+        <div class="modal" id="success"> 
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Success</div>
+            <div class="modal__descr">you are booked for a consultation</div>
+        </div>
+
+    </div>
 
     <script src="https://kit.fontawesome.com/ef1062ba9e.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>

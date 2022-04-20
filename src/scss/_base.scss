@@ -9,50 +9,10 @@ a {
     text-decoration: none;
 }
 
-.btn {
-    width: 220px;
-    height: 65px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    font-size: 15px;
-    font-weight: bold;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-    border-radius: 3px;
-    cursor: pointer;
-    transition: 0.3s all;
-    outline: none;
-
-    &_header {
-        background-color: #fff;
-        height: 40px;
-        
-    }
-    &_dark {
-        background-color: red;
-        color: #fff;
-        border: none;
-    }
-    &_min {
-        height: 50px;
-    }
-    &:hover {
-        color:black;
-        border: 2px solid rgb(9, 24, 107);
-        background-color:rgb(65, 90, 235);
-    }
-    
-}
-
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
 }
-
-
 
 .title {
     font-size: 36px;

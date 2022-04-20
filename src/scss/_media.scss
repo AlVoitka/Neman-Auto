@@ -1,0 +1,31 @@
+@media (max-width: 1600px) {
+    #media_2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    #media_1 {
+        display: none;
+    }
+
+    .header__right-block {
+        display: none;
+    }
+}
+
+
+
+
+@media (max-width: 1200px) {
+    .myslider__downslider {
+        max-width: 800px;
+    }
+
+}
+
+
+
+
+@media (max-width: 922px) {
+
+}

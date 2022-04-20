@@ -8,6 +8,9 @@
 /***/ ((module) => {
 
 function downslider() {
+
+
+
     
     $(document).ready(function(){
         $('.myslider__downslider').slick({
@@ -19,13 +22,123 @@ function downslider() {
             slidesToScroll: 2,
             prevArrow: '<button type="button" class="slick-prev"><img src="./img/left-arrow.svg"></button>',
             nextArrow: '<button type="button" class="slick-next"><img src="./img/right-arrow.svg"></button>',
+            responsive: [
+
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 2,
+                        arrows: false
+                    }
+                },
+
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        arrows: false
+                    }
+                },
+
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false
+                    }
+                },
+
+            ]
            
           });
     });
+
+
+
     
 }
 
 module.exports = downslider;
+
+/***/ }),
+
+/***/ "./src/js/modules/mailer.js":
+/*!**********************************!*\
+  !*** ./src/js/modules/mailer.js ***!
+  \**********************************/
+/***/ ((module) => {
+
+function mailer() {
+
+
+
+    $('form').submit(function() {
+        e.preventDefault();
+  
+        if(!$(this).valid()) {
+          return;
+        }
+  
+        $.ajax({
+          type: "POST",
+          url: "mailer/smart.php",
+          data: $(this).serialize()
+        }).done(function() {
+          $(this).finde("input").val("");
+          $('form').trigger('reset');
+        });
+        return false;
+    });
+
+
+
+
+
+
+
+}
+
+module.exports = mailer; 
+
+/***/ }),
+
+/***/ "./src/js/modules/modal.js":
+/*!*********************************!*\
+  !*** ./src/js/modules/modal.js ***!
+  \*********************************/
+/***/ ((module) => {
+
+function modal() {
+
+
+
+
+    $('.btn_header').on('click', function() {
+        $('.overlay, #consult').fadeIn('0.5s');
+    }); 
+
+    $('.modal__close').on('click', function(){
+        $('.overlay, #consult, #success').fadeOut('1s');
+      });
+
+    $('.btn_modal').on('click', function() {
+        $('#consult').fadeOut('1s');
+        $('#success').fadeIn('1s');
+    });  
+
+    $('.btn').on('click', function() {
+        $('.overlay, #success').fadeIn('1s');
+    });  
+     
+
+
+
+}
+
+module.exports = modal; 
 
 /***/ }),
 
@@ -177,18 +290,21 @@ var __webpack_exports__ = {};
 /*!**************************!*\
   !*** ./src/js/script.js ***!
   \**************************/
-
 window.addEventListener('DOMContentLoaded', function() {
     const upslider = __webpack_require__(/*! ./modules/upslider */ "./src/js/modules/upslider.js"),
           downslider =__webpack_require__(/*! ./modules/downslider */ "./src/js/modules/downslider.js"),
           tabs =__webpack_require__(/*! ./modules/tabs */ "./src/js/modules/tabs.js"),
           scrollUP =__webpack_require__(/*! ./modules/scrollUP */ "./src/js/modules/scrollUP.js")
+          modal = __webpack_require__(/*! ./modules/modal */ "./src/js/modules/modal.js");
+          mailer = __webpack_require__(/*! ./modules/mailer */ "./src/js/modules/mailer.js");
           
 
     upslider();
     downslider();
     tabs();
     scrollUP();
+    modal();
+    mailer();
     
 
     new WOW().init();
