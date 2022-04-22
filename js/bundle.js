@@ -142,6 +142,54 @@ module.exports = modal;
 
 /***/ }),
 
+/***/ "./src/js/modules/prompts.js":
+/*!***********************************!*\
+  !*** ./src/js/modules/prompts.js ***!
+  \***********************************/
+/***/ ((module) => {
+
+function prompts() {
+
+   
+
+
+    // const userDB = {
+    //     answers: {}
+    // };
+
+
+    // for (let i = 0; i < 1; i++) {
+
+    //     const ask_1 = prompt('Are you a cargo owner or logistician?','')
+    //     const ask_2 = prompt('Do you want a consultation?','')
+
+    //     if(ask_1 != null && ask_2 != null && ask_1 !='' && ask_2 !='' && ask_1.length < 11 && ask_2.length < 11 ) {
+    //         console.log('Done!');
+    //         userDB.answers[ask_1] = ask_2;
+    //     } else {
+    //         console.log('Error!');
+    //         i--;
+    //     }
+    // }
+
+
+
+  
+
+    
+
+
+
+
+    
+
+
+}
+
+module.exports = prompts; 
+
+/***/ }),
+
 /***/ "./src/js/modules/scrollUP.js":
 /*!************************************!*\
   !*** ./src/js/modules/scrollUP.js ***!
@@ -290,11 +338,13 @@ var __webpack_exports__ = {};
 /*!**************************!*\
   !*** ./src/js/script.js ***!
   \**************************/
+
 window.addEventListener('DOMContentLoaded', function() {
     const upslider = __webpack_require__(/*! ./modules/upslider */ "./src/js/modules/upslider.js"),
           downslider =__webpack_require__(/*! ./modules/downslider */ "./src/js/modules/downslider.js"),
           tabs =__webpack_require__(/*! ./modules/tabs */ "./src/js/modules/tabs.js"),
           scrollUP =__webpack_require__(/*! ./modules/scrollUP */ "./src/js/modules/scrollUP.js")
+          prompts = __webpack_require__(/*! ./modules/prompts */ "./src/js/modules/prompts.js");
           modal = __webpack_require__(/*! ./modules/modal */ "./src/js/modules/modal.js");
           mailer = __webpack_require__(/*! ./modules/mailer */ "./src/js/modules/mailer.js");
           
@@ -305,6 +355,7 @@ window.addEventListener('DOMContentLoaded', function() {
     scrollUP();
     modal();
     mailer();
+    prompts();
     
 
     new WOW().init();
