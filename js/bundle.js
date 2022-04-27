@@ -65,6 +65,103 @@ module.exports = downslider;
 
 /***/ }),
 
+/***/ "./src/js/modules/interactive.js":
+/*!***************************************!*\
+  !*** ./src/js/modules/interactive.js ***!
+  \***************************************/
+/***/ ((module) => {
+
+function interactive() {
+
+
+
+    const typeDB = {
+        type: [
+            // "Trucking transportation",
+            // "Air transportation",
+            // "Rail transportation",
+            // "Ferry transportation"
+        ]
+    };
+
+
+
+
+
+    const   vehicleList = document.querySelector('.interactive__interactive-list'),
+            addForm = document.querySelector('.add'),
+            addInput = addForm.querySelector('.interactive__box-input'),
+            checkbox = addForm.querySelector('[type="checkbox"]');
+
+
+
+    
+
+    function createNewUserList (list, DB) {
+
+        list.innerHTML = "";
+
+        DB.forEach((vehicle,i) => {
+            list.innerHTML += `
+            <li class="interactive__interactive-item">${i + 1} ${vehicle}
+                <div class="delete"></div>
+            </li>
+            `
+        });
+
+        document.querySelectorAll('.delete').forEach((btn, i) =>{
+            btn.addEventListener('click', () =>{
+                btn.parentElement.remove();
+                typeDB.type.splice(i, 1);
+
+                createNewUserList(vehicleList, typeDB.type);
+            })
+        })
+        
+    }
+    createNewUserList(vehicleList, typeDB.type);
+
+
+
+
+    addForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const userValue = addInput.value;
+              userCheck = checkbox.checked;
+
+        if(userValue || userCheck) {
+
+            if (userCheck)  {
+                vehicleList.innerHTML = "";
+                vehicleList.innerHTML = `
+                <li class="interactive__interactive-item">I only use trucks
+                    <div class="delete"></div>
+                </li>
+                `;
+            } else {
+                typeDB.type.push(userValue);
+                typeDB.type.sort();
+                createNewUserList(vehicleList, typeDB.type);
+                addForm.reset();
+            } 
+        }   
+    });
+
+
+
+
+
+
+
+
+
+}
+
+module.exports = interactive; 
+
+/***/ }),
+
 /***/ "./src/js/modules/mailer.js":
 /*!**********************************!*\
   !*** ./src/js/modules/mailer.js ***!
@@ -75,23 +172,23 @@ function mailer() {
 
 
 
-    $('form').submit(function() {
-        e.preventDefault();
+    // $('form').submit(function() {
+    //     e.preventDefault();
   
-        if(!$(this).valid()) {
-          return;
-        }
+    //     if(!$(this).valid()) {
+    //       return;
+    //     }
   
-        $.ajax({
-          type: "POST",
-          url: "mailer/smart.php",
-          data: $(this).serialize()
-        }).done(function() {
-          $(this).finde("input").val("");
-          $('form').trigger('reset');
-        });
-        return false;
-    });
+    //     $.ajax({
+    //       type: "POST",
+    //       url: "mailer/smart.php",
+    //       data: $(this).serialize()
+    //     }).done(function() {
+    //       $(this).finde("input").val("");
+    //       $('form').trigger('reset');
+    //     });
+    //     return false;
+    // });
 
 
 
@@ -340,6 +437,7 @@ var __webpack_exports__ = {};
   \**************************/
 
 window.addEventListener('DOMContentLoaded', function() {
+    
     const upslider = __webpack_require__(/*! ./modules/upslider */ "./src/js/modules/upslider.js"),
           downslider =__webpack_require__(/*! ./modules/downslider */ "./src/js/modules/downslider.js"),
           tabs =__webpack_require__(/*! ./modules/tabs */ "./src/js/modules/tabs.js"),
@@ -347,6 +445,7 @@ window.addEventListener('DOMContentLoaded', function() {
           prompts = __webpack_require__(/*! ./modules/prompts */ "./src/js/modules/prompts.js");
           modal = __webpack_require__(/*! ./modules/modal */ "./src/js/modules/modal.js");
           mailer = __webpack_require__(/*! ./modules/mailer */ "./src/js/modules/mailer.js");
+          interactive = __webpack_require__(/*! ./modules/interactive */ "./src/js/modules/interactive.js");
           
 
     upslider();
@@ -356,6 +455,7 @@ window.addEventListener('DOMContentLoaded', function() {
     modal();
     mailer();
     prompts();
+    interactive();
     
 
     new WOW().init();
