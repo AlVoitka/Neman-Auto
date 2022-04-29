@@ -202,6 +202,58 @@ module.exports = mailer;
 
 /***/ }),
 
+/***/ "./src/js/modules/modal_JS.js":
+/*!************************************!*\
+  !*** ./src/js/modules/modal_JS.js ***!
+  \************************************/
+/***/ ((module) => {
+
+
+function modal_JS() {
+
+   const modalTrigger1 = document.querySelector('[data-modal]');
+   const modalTrigger2 = document.querySelector('[data-modalSuccss]');
+   const overlay = document.querySelector('.overlay-JS');
+   const modalFeedback = document.querySelector('#feedback-JS');
+   const modalSucces = document.querySelector('#success-JS');
+   const modalCloseFB = document.querySelector('[data-closeFB]');
+   const modalCloseSC = document.querySelector('[data-closeSC]');
+
+
+   modalTrigger1.addEventListener('click', () => {
+       overlay.style.display="block";
+       modalFeedback.style.display="block";
+   })
+
+   modalTrigger2.addEventListener('click', (e) => {
+        e.preventDefault();
+        overlay.style.display="block";
+        modalSucces.style.display="block";
+        modalFeedback.style.display="none";
+    })
+
+
+   modalCloseFB.addEventListener('click', ()=> {
+        overlay.style.display="none";
+        modalFeedback.style.display="none";
+   })
+
+   modalCloseSC.addEventListener('click', ()=> {
+        overlay.style.display="none";
+        modalSucces.style.display="none";
+   })
+        
+
+
+
+}
+
+
+
+module.exports = modal_JS; 
+
+/***/ }),
+
 /***/ "./src/js/modules/modal_jQ.js":
 /*!************************************!*\
   !*** ./src/js/modules/modal_jQ.js ***!
@@ -543,6 +595,7 @@ window.addEventListener('DOMContentLoaded', function() {
           scrollUP =__webpack_require__(/*! ./modules/scrollUP */ "./src/js/modules/scrollUP.js")
           prompts = __webpack_require__(/*! ./modules/prompts */ "./src/js/modules/prompts.js"),
           modal_jQ = __webpack_require__(/*! ./modules/modal_jQ */ "./src/js/modules/modal_jQ.js"),
+          modal_JS = __webpack_require__(/*! ./modules/modal_JS */ "./src/js/modules/modal_JS.js"),
           mailer = __webpack_require__(/*! ./modules/mailer */ "./src/js/modules/mailer.js"),
           interactive = __webpack_require__(/*! ./modules/interactive */ "./src/js/modules/interactive.js"),
           timer = __webpack_require__(/*! ./modules/timer */ "./src/js/modules/timer.js");
@@ -553,6 +606,7 @@ window.addEventListener('DOMContentLoaded', function() {
     tabs();
     scrollUP();
     modal_jQ();
+    modal_JS();
     mailer();
     prompts();
     interactive();

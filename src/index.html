@@ -304,7 +304,9 @@
                         <br><br>
                         The promotion will end on December 31 at 00:00
                     </div>
-                    <button data-madal class="btn_promo">I want it</button>
+                    <button data-modal class="btn_promo animate__animated wow animate__flash" data-wow-delay="1s" data-wow-duration="2s">
+                        I want it
+                    </button>
                 </div>
                 <div class="promotion__timer">
                     <div class="promotion__title">Remaining until the end of the promotion:</div>
@@ -429,8 +431,29 @@
 
         <div class="modal" id="success"> 
             <div class="modal__close">&times;</div>
-            <div class="modal__subtitle">Success</div>
+            <div class="modal__subtitle">Success!</div>
             <div class="modal__descr">you are booked for a consultation</div>
+        </div>
+
+    </div>
+
+
+    <div class="overlay-JS"> 
+
+        <div class="modal-JS" id="feedback-JS"> 
+            <div data-closeFB class="modal-JS__close">&times;</div>
+            <div class="modal-JS__subtitle">get a discount</div>
+            <div class="modal-JS__descr">leave your number and you will be contacted within 15 minutes</div>
+            <form class="form-JS">
+                <input name="phone" required placeholder="Phone" type="number">
+                <button data-modalSuccss class="btn_modal-JS">send</button>
+            </form>
+        </div>
+
+        <div class="modal-JS" id="success-JS"> 
+            <div data-closeSC class="modal-JS__close">&times;</div>
+            <div class="modal-JS__subtitle">Success!</div>
+            <div class="modal-JS__descr">Will call you within 15 minutes</div>
         </div>
 
     </div>

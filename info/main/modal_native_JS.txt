@@ -1,0 +1,76 @@
+
+
+Как сверстать и какие нужны элементы вся инфа в описании по созданию окон на jQuerry
+
+1. 
+Назаначаю триггеру ( элемент на котором начинается взаимодействие) дата атрибут 
+(data-modal к примеру  после черточки можно писать все что угодно):
+если триггеров несколько, то  каждому из них назначаю:
+
+<button data-modal class="btn_promo">I want it</button>
+
+2.
+так же назначаю дата-атрибут data-close на кнопки по закрытию модальных окно:
+
+<div class="overlay-JS"> 
+
+        <div class="modal-JS" id="feedback-JS"> 
+            <div data-close class="modal-JS__close">&times;</div> -----------вот
+            <div class="modal-JS__subtitle">get a discount</div>
+            <div class="modal-JS__descr">leave your number and you will be contacted within 15 minutes</div>
+            <form class="form-JS">
+                <input name="phone" required placeholder="Phone" type="number">
+                <button class="btn_modal-JS">send</button>
+            </form>
+        </div>
+
+        <div class="modal-JS" id="success-JS"> 
+            <div data-close class="modal-JS__close">&times;</div>  -----------вот
+            <div class="modal-JS__subtitle">Success</div>
+            <div class="modal-JS__descr">Will call you within 15 minutes</div>
+        </div>
+
+    </div>
+
+
+3. 
+Получаю элементы:
+
+    const modalTrigger1 = document.querySelector('[data-modal]');  ----- триггер первого окна
+   const modalTrigger2 = document.querySelector('[data-modalSuccss]'); ----- триггер кнопка внутри окна
+   const overlay = document.querySelector('.overlay-JS');   ------ оверлей
+   const modalFeedback = document.querySelector('#feedback-JS'); ---- само модальное окно
+   const modalSucces = document.querySelector('#success-JS');   ----- второе окно с успехом
+   const modalCloseFB = document.querySelector('[data-closeFB]');   ----- крестик для первого
+   const modalCloseSC = document.querySelector('[data-closeSC]');   ----- крестик для второго
+
+
+4. Основная концепция - я буду менять стили для элементов
+У меня есть оверлей и два модальных окна. Они сейчас в позиции display: none; 
+так вот при помощи скрипта я буду менять display: none;  на display: block;
+
+5.
+Вешаю обработчик на первый триггер:
+
+    modalTrigger1.addEventListener('click', () => {
+       overlay.style.display="block";            ---------- активирую оверлей
+       modalFeedback.style.display="block";  ----------- активирую первое модальное окно
+   })
+
+6.
+Вешаю обработчик на крестик для закрытия окна:
+
+    modalCloseFB.addEventListener('click', ()=> {
+        overlay.style.display="none";         ------ скрываю оверлей 
+        modalFeedback.style.display="none";  --------скрываю окно
+   })
+
+7.
+ Вешаю обработчик на второй триггер ( это кнопка уже внутри первого окна):
+
+    modalTrigger2.addEventListener('click', (e) => {  ----передаю эвент объект события
+        e.preventDefault();              ----------- и отключаю станд повед браузера, чтобы не перезагружал страницу
+        overlay.style.display="block";
+        modalSucces.style.display="block";   -----активирую второе окно суспехом
+        modalFeedback.style.display="none";  -----первую моталку скрываю
+    })   
