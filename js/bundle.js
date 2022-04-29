@@ -202,13 +202,13 @@ module.exports = mailer;
 
 /***/ }),
 
-/***/ "./src/js/modules/modal.js":
-/*!*********************************!*\
-  !*** ./src/js/modules/modal.js ***!
-  \*********************************/
+/***/ "./src/js/modules/modal_jQ.js":
+/*!************************************!*\
+  !*** ./src/js/modules/modal_jQ.js ***!
+  \************************************/
 /***/ ((module) => {
 
-function modal() {
+function modal_jQ() {
 
 
 
@@ -235,7 +235,7 @@ function modal() {
 
 }
 
-module.exports = modal; 
+module.exports = modal_jQ; 
 
 /***/ }),
 
@@ -375,6 +375,105 @@ module.exports = tabs;
 
 /***/ }),
 
+/***/ "./src/js/modules/timer.js":
+/*!*********************************!*\
+  !*** ./src/js/modules/timer.js ***!
+  \*********************************/
+/***/ ((module) => {
+
+function timer() {
+
+
+
+
+    const deadline = '2022-12-31';
+
+    function getTimeRemaining(endtime) {
+        let days, hours, minutes, seconds;
+        const t = Date.parse(endtime) - Date.parse(new Date());
+
+
+        if (t <= 0) {
+            days = 0;
+            hours = 0;
+            minutes = 0;
+            seconds = 0;
+
+        } else {
+            days = Math.floor( (t/(1000*60*60*24)) ),
+            seconds = Math.floor( (t/1000) % 60 ),
+            minutes = Math.floor( (t/1000/60) % 60 ),
+            hours = Math.floor( (t/(1000*60*60) % 24) );
+        }
+         
+        return {
+            'total': t,
+            'days': days,
+            'hours': hours,
+            'minutes': minutes,
+            'seconds': seconds
+        };
+    }
+
+
+
+
+    function getZero(num){
+        if (num >= 0 && num < 10) { 
+            return '0' + num;
+        } else {
+            return num;
+        }
+    }
+
+
+
+
+
+    function setClock(selector, endtime) {
+
+        const timer = document.querySelector(selector),
+            days = timer.querySelector("#days"),
+            hours = timer.querySelector('#hours'),
+            minutes = timer.querySelector('#minutes'),
+            seconds = timer.querySelector('#seconds'),
+            timeInterval = setInterval(updateClock, 1000);
+
+        updateClock();
+
+        function updateClock() {
+            const t = getTimeRemaining(endtime);
+
+            days.innerHTML = getZero(t.days);
+            hours.innerHTML = getZero(t.hours);
+            minutes.innerHTML = getZero(t.minutes);
+            seconds.innerHTML = getZero(t.seconds);
+
+            if (t.total <= 0) {
+                clearInterval(timeInterval);
+            }
+        }
+    }
+
+    setClock('.timer', deadline);
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+module.exports = timer;
+
+/***/ }),
+
 /***/ "./src/js/modules/upslider.js":
 /*!************************************!*\
   !*** ./src/js/modules/upslider.js ***!
@@ -442,20 +541,22 @@ window.addEventListener('DOMContentLoaded', function() {
           downslider =__webpack_require__(/*! ./modules/downslider */ "./src/js/modules/downslider.js"),
           tabs =__webpack_require__(/*! ./modules/tabs */ "./src/js/modules/tabs.js"),
           scrollUP =__webpack_require__(/*! ./modules/scrollUP */ "./src/js/modules/scrollUP.js")
-          prompts = __webpack_require__(/*! ./modules/prompts */ "./src/js/modules/prompts.js");
-          modal = __webpack_require__(/*! ./modules/modal */ "./src/js/modules/modal.js");
-          mailer = __webpack_require__(/*! ./modules/mailer */ "./src/js/modules/mailer.js");
-          interactive = __webpack_require__(/*! ./modules/interactive */ "./src/js/modules/interactive.js");
+          prompts = __webpack_require__(/*! ./modules/prompts */ "./src/js/modules/prompts.js"),
+          modal_jQ = __webpack_require__(/*! ./modules/modal_jQ */ "./src/js/modules/modal_jQ.js"),
+          mailer = __webpack_require__(/*! ./modules/mailer */ "./src/js/modules/mailer.js"),
+          interactive = __webpack_require__(/*! ./modules/interactive */ "./src/js/modules/interactive.js"),
+          timer = __webpack_require__(/*! ./modules/timer */ "./src/js/modules/timer.js");
           
 
     upslider();
     downslider();
     tabs();
     scrollUP();
-    modal();
+    modal_jQ();
     mailer();
     prompts();
     interactive();
+    timer();
     
 
     new WOW().init();

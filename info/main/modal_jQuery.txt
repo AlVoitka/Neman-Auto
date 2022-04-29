@@ -1,5 +1,7 @@
 1 курс урок 59
 
+У меня в проекте 2 вида модалок, одни на jQuerry/ дригие на нативном JS
+
 Существуют готовые плагины для модальных окон:
 
 https://dimsemenov.com/plugins/magnific-popup/documentation.html

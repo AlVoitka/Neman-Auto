@@ -1,4 +1,4 @@
-function modal() {
+function modal_jQ() {
 
 
 
@@ -25,4 +25,4 @@ function modal() {
 
 }
 
-module.exports = modal; 
+module.exports = modal_jQ; 
