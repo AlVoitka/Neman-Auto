@@ -6,33 +6,56 @@ function modal_JS() {
    const overlay = document.querySelector('.overlay-JS');
    const modalFeedback = document.querySelector('#feedback-JS');
    const modalSucces = document.querySelector('#success-JS');
-   const modalCloseFB = document.querySelector('[data-closeFB]');
-   const modalCloseSC = document.querySelector('[data-closeSC]');
+   const modalClose = document.querySelectorAll('[data-close]');
 
 
-   modalTrigger1.addEventListener('click', () => {
-       overlay.style.display="block";
-       modalFeedback.style.display="block";
-   })
+    function openModal_1() {
+        overlay.style.display="block";
+        modalFeedback.style.display="block";
+        document.body.style.overflow="hidden";
+        clearTimeout(modalTimerId);
+    }
 
-   modalTrigger2.addEventListener('click', (e) => {
+    modalTrigger1.addEventListener('click', openModal_1);
+
+    modalTrigger2.addEventListener('click', (e) => {
         e.preventDefault();
         overlay.style.display="block";
         modalSucces.style.display="block";
         modalFeedback.style.display="none";
     })
 
-
-   modalCloseFB.addEventListener('click', ()=> {
+    function closeModal() {
         overlay.style.display="none";
         modalFeedback.style.display="none";
-   })
-
-   modalCloseSC.addEventListener('click', ()=> {
-        overlay.style.display="none";
         modalSucces.style.display="none";
-   })
-        
+        document.body.style.overflow="";
+    }
+
+    modalClose.forEach(item => {
+        item.addEventListener('click', closeModal)
+    })
+
+    overlay.addEventListener('click', (e)=> {
+        if(e.target === overlay) {
+           closeModal();
+        }
+    })
+
+    // const modalTimerId = setTimeout(openModal_1, 6000); 
+
+
+    function showModalByScroll() {
+        if(window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
+            openModal_1();
+            window.removeEventListener('scroll', showModalByScroll);
+        }
+    }
+
+    window.addEventListener('scroll', showModalByScroll);
+
+
+
 
 
 

@@ -1,6 +1,92 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/modules/clientCard.js":
+/*!**************************************!*\
+  !*** ./src/js/modules/clientCard.js ***!
+  \**************************************/
+/***/ ((module) => {
+
+function clientCard() {
+
+
+
+
+    class ClientCard {
+        constructor(src, alt, title, descr, price, parentSelector) {
+            this.src = src;
+            this.alt = alt;
+            this.title = title;
+            this.descr = descr;
+            this.price = price;
+            this.parent = document.querySelector(parentSelector);
+            this.transfer = 1.1;
+            this.changeToEUR();
+        }
+
+
+        changeToEUR() {
+            this.price = this.price * this.transfer;
+        }
+
+
+        render() {
+            const element = document.createElement('div');
+            element.innerHTML =`
+            <div class="menu__item">
+                <img src=${this.src} alt=${this.alt}>
+                <h3 class="menu__item-subtitle">${this.title}</h3>
+                <div class="menu__item-descr">${this.descr}</div>
+                <div class="menu__item-divider"></div>
+                <div class="menu__item-price">
+                    <div class="menu__item-cost">Price:</div>
+                    <div class="menu__item-total"><span>${this.price}</span> usd/year</div>
+                </div>
+            </div>
+            `;
+            this.parent.append(element);
+        }
+    }
+
+    new ClientCard(
+        "./scss/blocks/main/clientCard/silver.png",
+        "silver",
+        'Card "Silver"',
+        'Product of active and healthy people. This is a brand new product with the best price and high quality!',
+        20,
+        '.container_1'
+    ).render();  
+
+    new ClientCard(
+        "./scss/blocks/main/clientCard/gold.png",
+        "gold",
+        'Card “Gold”',
+        'Product of active and healthy people. This is a brand new product with the best price and high quality!',
+        40,
+        '.container_1'
+    ).render();  
+
+    new ClientCard(
+        "./scss/blocks/main/clientCard/platinum.jpg",
+        "platinum",
+        'Card "Platinum"',
+        'Product of active and healthy people. This is a brand new product with the best price and high quality!',
+        500,
+        '.container_1'
+    ).render();  
+    
+
+
+
+
+
+
+}
+
+module.exports = clientCard;
+
+/***/ }),
+
 /***/ "./src/js/modules/downslider.js":
 /*!**************************************!*\
   !*** ./src/js/modules/downslider.js ***!
@@ -216,33 +302,56 @@ function modal_JS() {
    const overlay = document.querySelector('.overlay-JS');
    const modalFeedback = document.querySelector('#feedback-JS');
    const modalSucces = document.querySelector('#success-JS');
-   const modalCloseFB = document.querySelector('[data-closeFB]');
-   const modalCloseSC = document.querySelector('[data-closeSC]');
+   const modalClose = document.querySelectorAll('[data-close]');
 
 
-   modalTrigger1.addEventListener('click', () => {
-       overlay.style.display="block";
-       modalFeedback.style.display="block";
-   })
+    function openModal_1() {
+        overlay.style.display="block";
+        modalFeedback.style.display="block";
+        document.body.style.overflow="hidden";
+        clearTimeout(modalTimerId);
+    }
 
-   modalTrigger2.addEventListener('click', (e) => {
+    modalTrigger1.addEventListener('click', openModal_1);
+
+    modalTrigger2.addEventListener('click', (e) => {
         e.preventDefault();
         overlay.style.display="block";
         modalSucces.style.display="block";
         modalFeedback.style.display="none";
     })
 
-
-   modalCloseFB.addEventListener('click', ()=> {
+    function closeModal() {
         overlay.style.display="none";
         modalFeedback.style.display="none";
-   })
-
-   modalCloseSC.addEventListener('click', ()=> {
-        overlay.style.display="none";
         modalSucces.style.display="none";
-   })
-        
+        document.body.style.overflow="";
+    }
+
+    modalClose.forEach(item => {
+        item.addEventListener('click', closeModal)
+    })
+
+    overlay.addEventListener('click', (e)=> {
+        if(e.target === overlay) {
+           closeModal();
+        }
+    })
+
+    // const modalTimerId = setTimeout(openModal_1, 6000); 
+
+
+    function showModalByScroll() {
+        if(window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
+            openModal_1();
+            window.removeEventListener('scroll', showModalByScroll);
+        }
+    }
+
+    window.addEventListener('scroll', showModalByScroll);
+
+
+
 
 
 
@@ -599,6 +708,7 @@ window.addEventListener('DOMContentLoaded', function() {
           mailer = __webpack_require__(/*! ./modules/mailer */ "./src/js/modules/mailer.js"),
           interactive = __webpack_require__(/*! ./modules/interactive */ "./src/js/modules/interactive.js"),
           timer = __webpack_require__(/*! ./modules/timer */ "./src/js/modules/timer.js");
+          clientCard = __webpack_require__(/*! ./modules/clientCard */ "./src/js/modules/clientCard.js");
           
 
     upslider();
@@ -611,6 +721,7 @@ window.addEventListener('DOMContentLoaded', function() {
     prompts();
     interactive();
     timer();
+    clientCard();
     
 
     new WOW().init();

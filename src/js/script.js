@@ -11,6 +11,7 @@ window.addEventListener('DOMContentLoaded', function() {
           mailer = require('./modules/mailer'),
           interactive = require('./modules/interactive'),
           timer = require('./modules/timer');
+          clientCard = require('./modules/clientCard');
           
 
     upslider();
@@ -23,6 +24,7 @@ window.addEventListener('DOMContentLoaded', function() {
     prompts();
     interactive();
     timer();
+    clientCard();
     
 
     new WOW().init();
