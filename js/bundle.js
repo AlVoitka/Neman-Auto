@@ -151,6 +151,93 @@ module.exports = downslider;
 
 /***/ }),
 
+/***/ "./src/js/modules/form.js":
+/*!********************************!*\
+  !*** ./src/js/modules/form.js ***!
+  \********************************/
+/***/ ((module) => {
+
+function form() {
+
+    const forms = document.querySelectorAll('form');
+
+    function postData(form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const request = new XMLHttpRequest();
+            request.open('POST', 'server.php')
+
+        })
+
+
+    }
+
+
+
+
+
+
+
+
+}
+
+module.exports = form; 
+
+/***/ }),
+
+/***/ "./src/js/modules/header.js":
+/*!**********************************!*\
+  !*** ./src/js/modules/header.js ***!
+  \**********************************/
+/***/ ((module) => {
+
+function header() {
+
+    // const elemNavi = document.querySelectorAll('.header__link');
+
+
+    // function hideClass() {
+    //     elemNavi.forEach(item => {
+    //         item.classList.remove('header__link');
+    //     })
+    // }
+    
+    // function addActiveClass(npp) {
+    //     elemNavi.forEach(item => {
+    //         item[npp].classList.add('header__link-active');
+    //     })
+    // }
+    // addActiveClass(1);
+
+
+    // elemNavi.forEach(i => {
+    //     i.addEventListener('click', (event)=> {
+
+    //         const target = event.target;
+
+    //         if (target) {
+    //             elemNavi.forEach((item, npp) => {
+    //                 if(target == item) {
+    //                     hideClass();
+    //                     addActiveClass(npp);
+    //                 }
+    //             })
+    //         }
+            
+
+    //     })
+    // })
+
+    
+
+
+}
+
+module.exports = header;
+
+/***/ }),
+
 /***/ "./src/js/modules/interactive.js":
 /*!***************************************!*\
   !*** ./src/js/modules/interactive.js ***!
@@ -338,7 +425,7 @@ function modal_JS() {
         }
     })
 
-    // const modalTimerId = setTimeout(openModal_1, 6000); 
+    const modalTimerId = setTimeout(openModal_1, 60000); 
 
 
     function showModalByScroll() {
@@ -530,6 +617,8 @@ function tabs() {
 
 }
 
+
+
 module.exports = tabs;
 
 
@@ -696,9 +785,11 @@ var __webpack_exports__ = {};
   !*** ./src/js/script.js ***!
   \**************************/
 
+
 window.addEventListener('DOMContentLoaded', function() {
     
     const upslider = __webpack_require__(/*! ./modules/upslider */ "./src/js/modules/upslider.js"),
+          header = __webpack_require__(/*! ./modules/header */ "./src/js/modules/header.js"),
           downslider =__webpack_require__(/*! ./modules/downslider */ "./src/js/modules/downslider.js"),
           tabs =__webpack_require__(/*! ./modules/tabs */ "./src/js/modules/tabs.js"),
           scrollUP =__webpack_require__(/*! ./modules/scrollUP */ "./src/js/modules/scrollUP.js")
@@ -707,10 +798,12 @@ window.addEventListener('DOMContentLoaded', function() {
           modal_JS = __webpack_require__(/*! ./modules/modal_JS */ "./src/js/modules/modal_JS.js"),
           mailer = __webpack_require__(/*! ./modules/mailer */ "./src/js/modules/mailer.js"),
           interactive = __webpack_require__(/*! ./modules/interactive */ "./src/js/modules/interactive.js"),
-          timer = __webpack_require__(/*! ./modules/timer */ "./src/js/modules/timer.js");
-          clientCard = __webpack_require__(/*! ./modules/clientCard */ "./src/js/modules/clientCard.js");
+          timer = __webpack_require__(/*! ./modules/timer */ "./src/js/modules/timer.js"),
+          clientCard = __webpack_require__(/*! ./modules/clientCard */ "./src/js/modules/clientCard.js"),
+          form = __webpack_require__(/*! ./modules/form */ "./src/js/modules/form.js");
           
 
+    header();      
     upslider();
     downslider();
     tabs();
@@ -722,6 +815,8 @@ window.addEventListener('DOMContentLoaded', function() {
     interactive();
     timer();
     clientCard();
+    form();
+    
     
 
     new WOW().init();

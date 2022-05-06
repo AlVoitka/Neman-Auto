@@ -42,7 +42,7 @@ function modal_JS() {
         }
     })
 
-    // const modalTimerId = setTimeout(openModal_1, 6000); 
+    const modalTimerId = setTimeout(openModal_1, 60000); 
 
 
     function showModalByScroll() {

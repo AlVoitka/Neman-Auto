@@ -1,7 +1,9 @@
 
+
 window.addEventListener('DOMContentLoaded', function() {
     
     const upslider = require('./modules/upslider'),
+          header = require('./modules/header'),
           downslider =require('./modules/downslider'),
           tabs =require('./modules/tabs'),
           scrollUP =require('./modules/scrollUP')
@@ -10,10 +12,12 @@ window.addEventListener('DOMContentLoaded', function() {
           modal_JS = require('./modules/modal_JS'),
           mailer = require('./modules/mailer'),
           interactive = require('./modules/interactive'),
-          timer = require('./modules/timer');
-          clientCard = require('./modules/clientCard');
+          timer = require('./modules/timer'),
+          clientCard = require('./modules/clientCard'),
+          form = require('./modules/form');
           
 
+    header();      
     upslider();
     downslider();
     tabs();
@@ -25,6 +29,8 @@ window.addEventListener('DOMContentLoaded', function() {
     interactive();
     timer();
     clientCard();
+    form();
+    
     
 
     new WOW().init();

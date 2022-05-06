@@ -85,7 +85,15 @@ h1 {
         
         
         
-    }    
+    } 
+    
+    &__link-active {
+        position: relative;
+        margin-right: 80px;
+        font-weight: bold;
+        font-size: 18px;
+        color: rgba(236, 97, 108,0.8);
+    }
 
 
     &__link {

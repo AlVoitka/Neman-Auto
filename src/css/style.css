@@ -2147,6 +2147,14 @@ h1 {
   background: red;
 }
 
+.header__link-active {
+  position: relative;
+  margin-right: 80px;
+  font-weight: bold;
+  font-size: 18px;
+  color: rgba(236, 97, 108, 0.8);
+}
+
 .header__link {
   position: relative;
   margin-right: 80px;
@@ -3025,7 +3033,6 @@ h1 {
 }
 
 .menu__field {
-  margin-top: 50px;
   padding: 50px 0;
   width: 100%;
   background: rgba(62, 89, 240, 0.2);
