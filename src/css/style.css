@@ -2308,6 +2308,36 @@ h1 {
   text-align: center;
 }
 
+.aboutAs__sliderJS-wrapper {
+  position: relative;
+}
+
+.aboutAs__sliderJS-counter {
+  position: absolute;
+  margin-top: 40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.aboutAs__sliderJS-prev {
+  position: absolute;
+  left: -45px;
+  top: -3px;
+  cursor: pointer;
+}
+
+.aboutAs__sliderJS-next {
+  position: absolute;
+  right: -42px;
+  top: -1px;
+  cursor: pointer;
+}
+
+.aboutAs #current {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .service {
   background: linear-gradient(to right, #e2e5f3, #bec1d3);
 }

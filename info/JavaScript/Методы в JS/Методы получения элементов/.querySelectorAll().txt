@@ -15,7 +15,9 @@ div – элементы с таким тегом.
 синтаксис:
 
 let elem = document.querySelectorAll('.heart');  --- тут точка обязательна тк работа не с классами а с селекторами
-console.log(elem);
+const next = document.querySelector('.aboutAs__sliderJS-next');  -- получение по селектору
+const total = document.querySelector('#total');                   --- по ID
+let elem = document.querySelector('button');                      --- по тэгу
 
 
 NodeList(3) [div.heart, div.heart, div.heart]

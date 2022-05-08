@@ -5,3 +5,6 @@ Document метод querySelector() возвращает первый элеме
 
 Синтаксис
 element = document.querySelector(selectors);
+
+    const next = document.querySelector('.aboutAs__sliderJS-next');  -- получение по селектору
+    const total = document.querySelector('#total');                   --- по ID

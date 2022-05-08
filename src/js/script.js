@@ -1,10 +1,12 @@
 
 
+
 window.addEventListener('DOMContentLoaded', function() {
     
     const upslider = require('./modules/upslider'),
           header = require('./modules/header'),
           downslider =require('./modules/downslider'),
+          sliderJS = require('./modules/sliderNativeJS'),
           tabs =require('./modules/tabs'),
           scrollUP =require('./modules/scrollUP')
           prompts = require('./modules/prompts'),
@@ -20,6 +22,7 @@ window.addEventListener('DOMContentLoaded', function() {
     header();      
     upslider();
     downslider();
+    sliderJS();
     tabs();
     scrollUP();
     modal_jQ();

@@ -565,6 +565,81 @@ module.exports = scrollUP;
 
 /***/ }),
 
+/***/ "./src/js/modules/sliderNativeJS.js":
+/*!******************************************!*\
+  !*** ./src/js/modules/sliderNativeJS.js ***!
+  \******************************************/
+/***/ ((module) => {
+
+function sliderJS() {
+
+
+    let slideIndex = 1;
+    
+    const slides = document.querySelectorAll('.aboutAs__sliderJS-item');
+    const prev = document.querySelector('.aboutAs__sliderJS-prev');
+    const next = document.querySelector('.aboutAs__sliderJS-next');
+    const total = document.querySelector('#total');
+    const current = document.querySelector('#current');
+
+
+
+
+    showSlides(slideIndex);
+
+
+    if (slides.length < 10) {
+        total.textContent = `0${slides.length}`;
+    } else {
+        total.textContent = slides.length;
+    }
+
+
+
+    function showSlides(n) {
+        if (n > slides.length) {
+            slideIndex = 1;
+        }
+        if (n < 1) {
+            slideIndex = slides.length;
+        }
+
+        slides.forEach((item) => item.style.display = 'none');
+
+        slides[slideIndex - 1].style.display = 'block'; 
+        
+        if (slides.length < 10) {
+            current.textContent =  `0${slideIndex}`;
+        } else {
+            current.textContent =  slideIndex;
+        }
+    }
+
+    function plusSlides (n) {
+        showSlides(slideIndex += n);
+    }
+
+
+    prev.addEventListener('click', function(){
+        plusSlides(-1);
+    });
+
+    next.addEventListener('click', function(){
+        plusSlides(1);
+    });
+
+
+
+
+
+
+
+}
+
+module.exports = sliderJS; 
+
+/***/ }),
+
 /***/ "./src/js/modules/tabs.js":
 /*!********************************!*\
   !*** ./src/js/modules/tabs.js ***!
@@ -786,11 +861,13 @@ var __webpack_exports__ = {};
   \**************************/
 
 
+
 window.addEventListener('DOMContentLoaded', function() {
     
     const upslider = __webpack_require__(/*! ./modules/upslider */ "./src/js/modules/upslider.js"),
           header = __webpack_require__(/*! ./modules/header */ "./src/js/modules/header.js"),
           downslider =__webpack_require__(/*! ./modules/downslider */ "./src/js/modules/downslider.js"),
+          sliderJS = __webpack_require__(/*! ./modules/sliderNativeJS */ "./src/js/modules/sliderNativeJS.js"),
           tabs =__webpack_require__(/*! ./modules/tabs */ "./src/js/modules/tabs.js"),
           scrollUP =__webpack_require__(/*! ./modules/scrollUP */ "./src/js/modules/scrollUP.js")
           prompts = __webpack_require__(/*! ./modules/prompts */ "./src/js/modules/prompts.js"),
@@ -806,6 +883,7 @@ window.addEventListener('DOMContentLoaded', function() {
     header();      
     upslider();
     downslider();
+    sliderJS();
     tabs();
     scrollUP();
     modal_jQ();

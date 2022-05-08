@@ -1,0 +1,16 @@
+
+родитель: relative;
+    &__sliderJS-counter {
+        position: absolute;
+        margin-top: 40px;--- так по оси Y опускаю
+        left: 50%;                         -----
+        transform: translate(-50%, -50%);  -----вот 2 свойства центрируют по X
+
+
+/////  так размещаю в самый центр по  X и Y 
+
+    &__sliderJS-counter {
+        position: absolute;
+        top: 50%;         
+        left: 50%;
+        transform: translate(-50%, -50%);        

@@ -29,5 +29,34 @@
         margin-top: 20px;
         text-align: center;
     }
+
+
+
+    &__sliderJS-wrapper {
+        position: relative;
+    }
+    &__sliderJS-counter {
+        position: absolute;
+        margin-top: 40px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__sliderJS-prev {
+        position: absolute;
+        left: -45px;
+        top: -3px;
+        cursor: pointer;
+    }
+    &__sliderJS-next {
+        position: absolute;
+        right: -42px;
+        top: -1px;
+        cursor: pointer;
+    }
+    
+    #current { 
+        font-size: 20px;
+        font-weight: bold;
+    }
     
 }
