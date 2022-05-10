@@ -16,7 +16,7 @@ https://webref.ru/css#pseudo-class
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
     border-radius: 3px;
     cursor: pointer;
-    transition: 0.3s all;   -----  своисво времени  изменения 
+    transition: 0.3s all;   -----  своиство времени  изменения эффекта
     outline: none;
     &:hover {   ----- псевдоклас наведения мыши
         color:rgb(65, 90, 235);

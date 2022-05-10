@@ -63,6 +63,7 @@
     &__interactive-item {
         position: relative;
         margin-top: 10px;
+        transition: 0.5s all;
         &:hover {
             .delete {
                 content: '';
@@ -74,8 +75,13 @@
                 width: 20px;
                 height: 20px;
                 background-color: #7977eb;
-                // background: url('./trash.png') center (center / cover) no-repeat;
+                border-radius: 50%;
+                transition: 0.5s all;
+                // background: url('../trash.png') center (center / cover) no-repeat;
                 cursor: pointer;
+                &:hover {
+                    background-color: red;
+                }
                 &:after {
                     content: '';
                     position: absolute;
@@ -85,9 +91,15 @@
                     width: calc(70%);
                     height: 3px;
                     background-color: white;
+                    transition: 0.5s all;
                 }
             }
         }
+
+
+
+
+
         &:after {
             content: '';
             bottom: -5px;

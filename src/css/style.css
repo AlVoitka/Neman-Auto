@@ -2048,6 +2048,7 @@ hr {
   outline: none;
   width: 435px;
   height: 35px;
+  background-color: #f00fb8;
 }
 
 .btn_promo:hover {
@@ -2089,25 +2090,30 @@ h1 {
   font-weight: bold;
   font-size: 18px;
   color: rgba(227, 247, 52, 0.8);
-  transition: 0.2s all;
+  transition: 0.5s all;
 }
 
-.header__drop:hover {
-  color: rgba(236, 97, 108, 0.8);
-}
-
-.header__drop:hover:after {
+.header__drop:after {
   content: '';
   position: absolute;
   display: block;
-  width: 100%;
-  bottom: -1px;
+  width: 0%;
+  bottom: -5px;
   z-index: -1;
-  height: 2px;
+  height: 3px;
   background: red;
+  transition: 0.5s all;
 }
 
-.header__drop::before {
+.header__drop:hover {
+  color: red;
+}
+
+.header__drop:hover:after {
+  width: 100%;
+}
+
+.header__drop:before {
   content: '';
   position: absolute;
   border: solid #303030;
@@ -2160,12 +2166,28 @@ h1 {
   margin-right: 80px;
   font-weight: bold;
   font-size: 18px;
-  transition: 0.2s all;
+  transition: 0.5s all;
   color: rgba(227, 247, 52, 0.8);
 }
 
-.header__link i {
-  color: #303030;
+.header__link:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0%;
+  bottom: -5px;
+  z-index: -1;
+  height: 3px;
+  background: red;
+  transition: 0.5s all;
+}
+
+.header__link:hover {
+  color: red;
+}
+
+.header__link:hover:before {
+  width: 100%;
 }
 
 .header__link:nth-child(8)::before {
@@ -2185,19 +2207,8 @@ h1 {
   color: #c1e424;
 }
 
-.header__link:hover {
-  color: rgba(236, 97, 108, 0.8);
-}
-
-.header__link:hover:after {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 100%;
-  bottom: -1px;
-  z-index: -1;
-  height: 2px;
-  background: red;
+.header__link i {
+  color: #303030;
 }
 
 .header__link:last-child {
@@ -2316,7 +2327,7 @@ h1 {
   position: absolute;
   margin-top: 40px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
 }
 
 .aboutAs__sliderJS-prev {
@@ -2333,9 +2344,31 @@ h1 {
   cursor: pointer;
 }
 
+.aboutAs__indicators {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 300px;
+  height: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 25px;
+  list-style: none;
+}
+
 .aboutAs #current {
   font-size: 20px;
   font-weight: bold;
+  color: aqua;
+}
+
+.aboutAs #total {
+  color: aqua;
+}
+
+.aboutAs #line {
+  font-size: 20px;
+  color: aqua;
 }
 
 .service {
@@ -2934,6 +2967,7 @@ h1 {
 .interactive__interactive-item {
   position: relative;
   margin-top: 10px;
+  transition: 0.5s all;
 }
 
 .interactive__interactive-item:hover .delete {
@@ -2946,7 +2980,13 @@ h1 {
   width: 20px;
   height: 20px;
   background-color: #7977eb;
+  border-radius: 50%;
+  transition: 0.5s all;
   cursor: pointer;
+}
+
+.interactive__interactive-item:hover .delete:hover {
+  background-color: red;
 }
 
 .interactive__interactive-item:hover .delete:after {
@@ -2958,6 +2998,7 @@ h1 {
   width: calc(70%);
   height: 3px;
   background-color: white;
+  transition: 0.5s all;
 }
 
 .interactive__interactive-item:after {

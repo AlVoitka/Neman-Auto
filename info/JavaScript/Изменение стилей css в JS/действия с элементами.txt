@@ -37,6 +37,9 @@ xxx.forEach(item => {
 
 elem.style.cssText = 'background-color: blue; width: 500px'; - тут уже все как в css
 
+const slider = document.querySelector('aboutAs__sliderJS-wrapper');
+slider.style.position = 'relative'; ---- обратился к элементу и назначил ему позицию
+
 
 2. Если нужно назначить стили не одному, элементу а всему псевдомассиву:
 
