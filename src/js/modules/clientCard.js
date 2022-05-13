@@ -74,4 +74,4 @@ function clientCard() {
 
 }
 
-module.exports = clientCard;
+export default clientCard;

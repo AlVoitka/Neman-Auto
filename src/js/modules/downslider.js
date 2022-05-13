@@ -52,4 +52,4 @@ function downslider() {
     
 }
 
-module.exports = downslider;
+export default downslider;

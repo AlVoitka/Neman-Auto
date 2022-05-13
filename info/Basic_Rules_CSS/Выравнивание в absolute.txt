@@ -14,4 +14,16 @@
         position: absolute;
         top: 50%;         
         left: 50%;
-        transform: translate(-50%, -50%);        
+        transform: translate(-50%, -50%);   
+
+/// если нужно повернуть элемент вокруг своей оси
+
+.calculating #gender:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);  ---- вот одновресенно и поднял по Y и повернул на 45 градусов
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: #ee60cb;           

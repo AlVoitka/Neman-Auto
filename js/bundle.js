@@ -1,12 +1,256 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/js/modules/calculating.js":
+/*!***************************************!*\
+  !*** ./src/js/modules/calculating.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+
+function calculating() {
+
+
+
+
+
+    const result = document.querySelector('.calculating__result');
+
+    let truck_age, trucks_count, drivers_count, ratio;
+
+
+
+    function calcTotal() {
+
+        if (!truck_age || !trucks_count || !drivers_count || !activity) {
+            result.textContent = 'Fill in all the fields!';
+            return;
+        }
+
+        if (truck_age === 'less_5') {
+            result.textContent = 1.1 * activity * trucks_count;
+        } else {
+            result.textContent = 0.8 * activity * trucks_count;
+        }
+        
+    }
+    calcTotal();
+
+
+    function getStaticInfo(selector, activeClass) {
+        const elements = document.querySelectorAll(selector);
+
+        elements.forEach(elem => {
+            elem.addEventListener('click', (e) => {
+
+                if (e.target.getAttribute('data-ratio')) {
+                    ratio = +e.target.getAttribute('data-ratio');
+                } else {
+                    truck_age = e.target.getAttribute('id');
+                }
+    
+                elements.forEach(elem => {
+                    elem.classList.remove(activeClass);
+                });
+    
+                e.target.classList.add(activeClass);
+            });
+
+        });
+    }
+    getStaticInfo('#gender div', 'calculating__choose-item_active');
+    getStaticInfo('.calculating__choose_big div', 'calculating__choose-item_active');
+
+
+
+    function getFleetInformation(selector) {
+        const input = document.querySelector(selector);
+        
+        input.addEventListener('input', ()=> {
+            switch(input.getAttribute('id')) {
+                case 'count-tracks':
+                    trucks_count = +input.value;
+                    break;
+                case 'count-drivers':
+                    drivers_count = +input.value;
+                    break;
+            }
+            
+        });
+        
+    }
+    getFleetInformation('#count-tracks');
+    getFleetInformation('#count-drivers');
+
+    console.log(trucks_count);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // if (localStorage.getItem('truck_age')) {
+    //     truck_age = localStorage.getItem('truck_age');
+    // } else {
+    //     truck_age = 'female';
+    //     localStorage.setItem('sex', 'female');
+    // }
+
+    // if (localStorage.getItem('ratio')) {
+    //     ratio = localStorage.getItem('ratio');
+    // } else {
+    //     ratio = 1.375;
+    //     localStorage.setItem('ratio', 1.375);
+    // }
+
+
+
+    // function initLocalSettings(selector, activeClass) {
+    //     const elements = document.querySelectorAll(selector);
+
+    //     elements.forEach(elem => {
+    //         elem.classList.remove(activeClass);
+    //         if (elem.getAttribute('id') === localStorage.getItem('truck_age')) {
+    //             elem.classList.add(activeClass);
+    //         }
+    //         if (elem.getAttribute('data-ratio') === localStorage.getItem('ratio')) {
+    //             elem.classList.add(activeClass);
+    //         }
+    //     });
+    // }
+
+    // initLocalSettings('#gender div', 'calculating__choose-item_active');
+    // initLocalSettings('.calculating__choose_big div', 'calculating__choose-item_active');
+
+
+
+
+    
+
+
+
+
+
+    // function getAgeInformation() {
+    //     const elements = document.querySelectorAll('.age');
+
+        
+
+    //     elements.forEach(elem => {
+    //         elem.addEventListener('click', (e) => {
+    //             truck_age = +e.target.getAttribute('id');
+
+    //             elements.forEach(elem => {
+    //                 elem.classList.remove('calculating__choose-item_active');
+    //                 e.target.classList.add('calculating__choose-item_active');
+    //             })
+    //         });
+    //     });
+    // }
+    // getAgeInformation();
+    
+
+
+    
+
+
+
+
+    // function getActivityInformation() {
+    //     const elements = document.querySelectorAll('.activity');
+
+    //     elements.forEach(elem => {
+    //         elem.addEventListener('click', (e) => {
+
+    //             activity = +e.target.getAttribute('data-ratio');
+
+    //             elements.forEach(elem => {
+    //                 elem.classList.remove('calculating__choose-item_active');
+    //                 e.target.classList.add('calculating__choose-item_active');
+    //             })
+
+    //         });
+    //     });
+    // }
+    // getActivityInformation();
+
+
+    // function getFleetInformation(selector) {
+    //     const input = document.querySelector(selector);
+
+    //     input.addEventListener('input', ()=> {
+    //         switch(input.getAttribute('id')) {
+    //             case 'count-tracks':
+    //                 trucks_count = +input.value;
+    //                 break;
+    //             case 'count-drivers':
+    //                 drivers_count = +input.value;
+    //                 break;
+    //         }
+            
+    //     });
+    // }
+    // getFleetInformation('#count-tracks');
+    // getFleetInformation('#count-drivers');
+
+
+    
+
+    // console.log(truck_age);
+    // console.log(trucks_count);
+    // console.log(drivers_count);
+    // console.log(activity);
+
+
+
+
+    
+
+
+
+
+
+}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (calculating);
+
+/***/ }),
 
 /***/ "./src/js/modules/clientCard.js":
 /*!**************************************!*\
   !*** ./src/js/modules/clientCard.js ***!
   \**************************************/
-/***/ ((module) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 function clientCard() {
 
 
@@ -83,7 +327,7 @@ function clientCard() {
 
 }
 
-module.exports = clientCard;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (clientCard);
 
 /***/ }),
 
@@ -91,8 +335,12 @@ module.exports = clientCard;
 /*!**************************************!*\
   !*** ./src/js/modules/downslider.js ***!
   \**************************************/
-/***/ ((module) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 function downslider() {
 
 
@@ -147,7 +395,7 @@ function downslider() {
     
 }
 
-module.exports = downslider;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (downslider);
 
 /***/ }),
 
@@ -155,8 +403,12 @@ module.exports = downslider;
 /*!********************************!*\
   !*** ./src/js/modules/form.js ***!
   \********************************/
-/***/ ((module) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 function form() {
 
     const forms = document.querySelectorAll('form');
@@ -182,7 +434,7 @@ function form() {
 
 }
 
-module.exports = form; 
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (form); 
 
 /***/ }),
 
@@ -190,8 +442,12 @@ module.exports = form;
 /*!**********************************!*\
   !*** ./src/js/modules/header.js ***!
   \**********************************/
-/***/ ((module) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 function header() {
 
     // const elemNavi = document.querySelectorAll('.header__link');
@@ -234,7 +490,7 @@ function header() {
 
 }
 
-module.exports = header;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (header);
 
 /***/ }),
 
@@ -242,8 +498,12 @@ module.exports = header;
 /*!***************************************!*\
   !*** ./src/js/modules/interactive.js ***!
   \***************************************/
-/***/ ((module) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 function interactive() {
 
 
@@ -301,7 +561,7 @@ function interactive() {
         e.preventDefault();
 
         const userValue = addInput.value;
-              userCheck = checkbox.checked;
+        const userCheck = checkbox.checked;
 
         if(userValue || userCheck) {
 
@@ -331,7 +591,7 @@ function interactive() {
 
 }
 
-module.exports = interactive; 
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (interactive); 
 
 /***/ }),
 
@@ -339,8 +599,12 @@ module.exports = interactive;
 /*!**********************************!*\
   !*** ./src/js/modules/mailer.js ***!
   \**********************************/
-/***/ ((module) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 function mailer() {
 
 
@@ -371,7 +635,7 @@ function mailer() {
 
 }
 
-module.exports = mailer; 
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (mailer); 
 
 /***/ }),
 
@@ -379,8 +643,12 @@ module.exports = mailer;
 /*!************************************!*\
   !*** ./src/js/modules/modal_JS.js ***!
   \************************************/
-/***/ ((module) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 
 function modal_JS() {
 
@@ -446,7 +714,7 @@ function modal_JS() {
 
 
 
-module.exports = modal_JS; 
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (modal_JS); 
 
 /***/ }),
 
@@ -454,8 +722,12 @@ module.exports = modal_JS;
 /*!************************************!*\
   !*** ./src/js/modules/modal_jQ.js ***!
   \************************************/
-/***/ ((module) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 function modal_jQ() {
 
 
@@ -483,7 +755,7 @@ function modal_jQ() {
 
 }
 
-module.exports = modal_jQ; 
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (modal_jQ); 
 
 /***/ }),
 
@@ -491,8 +763,12 @@ module.exports = modal_jQ;
 /*!***********************************!*\
   !*** ./src/js/modules/prompts.js ***!
   \***********************************/
-/***/ ((module) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 function prompts() {
 
    
@@ -531,7 +807,7 @@ function prompts() {
 
 }
 
-module.exports = prompts; 
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (prompts); 
 
 /***/ }),
 
@@ -539,8 +815,12 @@ module.exports = prompts;
 /*!************************************!*\
   !*** ./src/js/modules/scrollUP.js ***!
   \************************************/
-/***/ ((module) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 function scrollUP() {
 
 
@@ -561,7 +841,7 @@ function scrollUP() {
 
 }
 
-module.exports = scrollUP;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (scrollUP);
 
 /***/ }),
 
@@ -569,8 +849,12 @@ module.exports = scrollUP;
 /*!******************************************!*\
   !*** ./src/js/modules/sliderNativeJS.js ***!
   \******************************************/
-/***/ ((module) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 function sliderJS() {
 
 
@@ -690,7 +974,7 @@ function sliderJS() {
 
 }
 
-module.exports = sliderJS; 
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (sliderJS); 
 
 /***/ }),
 
@@ -698,8 +982,12 @@ module.exports = sliderJS;
 /*!********************************!*\
   !*** ./src/js/modules/tabs.js ***!
   \********************************/
-/***/ ((module) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 function tabs() {
 
 
@@ -748,7 +1036,7 @@ function tabs() {
 
 
 
-module.exports = tabs;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (tabs);
 
 
 
@@ -758,8 +1046,12 @@ module.exports = tabs;
 /*!*********************************!*\
   !*** ./src/js/modules/timer.js ***!
   \*********************************/
-/***/ ((module) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 function timer() {
 
 
@@ -849,7 +1141,7 @@ function timer() {
 
 }
 
-module.exports = timer;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (timer);
 
 /***/ }),
 
@@ -857,8 +1149,12 @@ module.exports = timer;
 /*!************************************!*\
   !*** ./src/js/modules/upslider.js ***!
   \************************************/
-/***/ ((module) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 function upslider() {
     
     $(document).ready(function(){
@@ -876,7 +1172,7 @@ function upslider() {
     
 }
 
-module.exports = upslider;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (upslider);
 
 /***/ })
 
@@ -907,51 +1203,98 @@ module.exports = upslider;
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 /*!**************************!*\
   !*** ./src/js/script.js ***!
   \**************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modules_upslider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/upslider */ "./src/js/modules/upslider.js");
+/* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/header */ "./src/js/modules/header.js");
+/* harmony import */ var _modules_downslider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/downslider */ "./src/js/modules/downslider.js");
+/* harmony import */ var _modules_sliderNativeJS__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/sliderNativeJS */ "./src/js/modules/sliderNativeJS.js");
+/* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/tabs */ "./src/js/modules/tabs.js");
+/* harmony import */ var _modules_scrollUP__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/scrollUP */ "./src/js/modules/scrollUP.js");
+/* harmony import */ var _modules_prompts__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/prompts */ "./src/js/modules/prompts.js");
+/* harmony import */ var _modules_modal_jQ__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/modal_jQ */ "./src/js/modules/modal_jQ.js");
+/* harmony import */ var _modules_modal_JS__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/modal_JS */ "./src/js/modules/modal_JS.js");
+/* harmony import */ var _modules_mailer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/mailer */ "./src/js/modules/mailer.js");
+/* harmony import */ var _modules_interactive__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/interactive */ "./src/js/modules/interactive.js");
+/* harmony import */ var _modules_timer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/timer */ "./src/js/modules/timer.js");
+/* harmony import */ var _modules_clientCard__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/clientCard */ "./src/js/modules/clientCard.js");
+/* harmony import */ var _modules_form__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/form */ "./src/js/modules/form.js");
+/* harmony import */ var _modules_calculating__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/calculating */ "./src/js/modules/calculating.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 window.addEventListener('DOMContentLoaded', function() {
-    
-    const upslider = __webpack_require__(/*! ./modules/upslider */ "./src/js/modules/upslider.js"),
-          header = __webpack_require__(/*! ./modules/header */ "./src/js/modules/header.js"),
-          downslider =__webpack_require__(/*! ./modules/downslider */ "./src/js/modules/downslider.js"),
-          sliderJS = __webpack_require__(/*! ./modules/sliderNativeJS */ "./src/js/modules/sliderNativeJS.js"),
-          tabs =__webpack_require__(/*! ./modules/tabs */ "./src/js/modules/tabs.js"),
-          scrollUP =__webpack_require__(/*! ./modules/scrollUP */ "./src/js/modules/scrollUP.js")
-          prompts = __webpack_require__(/*! ./modules/prompts */ "./src/js/modules/prompts.js"),
-          modal_jQ = __webpack_require__(/*! ./modules/modal_jQ */ "./src/js/modules/modal_jQ.js"),
-          modal_JS = __webpack_require__(/*! ./modules/modal_JS */ "./src/js/modules/modal_JS.js"),
-          mailer = __webpack_require__(/*! ./modules/mailer */ "./src/js/modules/mailer.js"),
-          interactive = __webpack_require__(/*! ./modules/interactive */ "./src/js/modules/interactive.js"),
-          timer = __webpack_require__(/*! ./modules/timer */ "./src/js/modules/timer.js"),
-          clientCard = __webpack_require__(/*! ./modules/clientCard */ "./src/js/modules/clientCard.js"),
-          form = __webpack_require__(/*! ./modules/form */ "./src/js/modules/form.js");
-          
 
-    header();      
-    upslider();
-    downslider();
-    sliderJS();
-    tabs();
-    scrollUP();
-    modal_jQ();
-    modal_JS();
-    mailer();
-    prompts();
-    interactive();
-    timer();
-    clientCard();
-    form();
+    (0,_modules_header__WEBPACK_IMPORTED_MODULE_1__["default"])();      
+    (0,_modules_upslider__WEBPACK_IMPORTED_MODULE_0__["default"])();
+    (0,_modules_downslider__WEBPACK_IMPORTED_MODULE_2__["default"])();
+    (0,_modules_sliderNativeJS__WEBPACK_IMPORTED_MODULE_3__["default"])();
+    (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_4__["default"])();
+    (0,_modules_scrollUP__WEBPACK_IMPORTED_MODULE_5__["default"])();
+    (0,_modules_modal_jQ__WEBPACK_IMPORTED_MODULE_7__["default"])();
+    (0,_modules_modal_JS__WEBPACK_IMPORTED_MODULE_8__["default"])();
+    (0,_modules_mailer__WEBPACK_IMPORTED_MODULE_9__["default"])();
+    (0,_modules_prompts__WEBPACK_IMPORTED_MODULE_6__["default"])();
+    (0,_modules_interactive__WEBPACK_IMPORTED_MODULE_10__["default"])();
+    (0,_modules_timer__WEBPACK_IMPORTED_MODULE_11__["default"])();
+    (0,_modules_clientCard__WEBPACK_IMPORTED_MODULE_12__["default"])();
+    (0,_modules_form__WEBPACK_IMPORTED_MODULE_13__["default"])();
+    (0,_modules_calculating__WEBPACK_IMPORTED_MODULE_14__["default"])();
     
     
 
     new WOW().init();
+    
 });
 })();
 

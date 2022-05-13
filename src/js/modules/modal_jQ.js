@@ -25,4 +25,4 @@ function modal_jQ() {
 
 }
 
-module.exports = modal_jQ; 
+export default modal_jQ; 

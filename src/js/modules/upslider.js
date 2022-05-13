@@ -15,4 +15,4 @@ function upslider() {
     
 }
 
-module.exports = upslider;
+export default upslider;

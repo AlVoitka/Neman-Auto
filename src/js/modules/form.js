@@ -23,4 +23,4 @@ function form() {
 
 }
 
-module.exports = form; 
+export default form; 

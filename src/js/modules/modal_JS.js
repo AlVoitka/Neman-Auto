@@ -63,4 +63,4 @@ function modal_JS() {
 
 
 
-module.exports = modal_JS; 
+export default modal_JS; 

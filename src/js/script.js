@@ -1,23 +1,23 @@
 
 
+import  upslider from './modules/upslider';
+import  header from './modules/header';
+import  downslider from './modules/downslider';
+import  sliderJS from './modules/sliderNativeJS';
+import  tabs from './modules/tabs';
+import  scrollUP from './modules/scrollUP';
+import  prompts from './modules/prompts';
+import  modal_jQ from './modules/modal_jQ';
+import  modal_JS from './modules/modal_JS';
+import  mailer from './modules/mailer';
+import  interactive from './modules/interactive';
+import  timer from './modules/timer';
+import  clientCard from './modules/clientCard';
+import  form from './modules/form';
+import  calculating from './modules/calculating';
+
 
 window.addEventListener('DOMContentLoaded', function() {
-    
-    const upslider = require('./modules/upslider'),
-          header = require('./modules/header'),
-          downslider =require('./modules/downslider'),
-          sliderJS = require('./modules/sliderNativeJS'),
-          tabs =require('./modules/tabs'),
-          scrollUP =require('./modules/scrollUP')
-          prompts = require('./modules/prompts'),
-          modal_jQ = require('./modules/modal_jQ'),
-          modal_JS = require('./modules/modal_JS'),
-          mailer = require('./modules/mailer'),
-          interactive = require('./modules/interactive'),
-          timer = require('./modules/timer'),
-          clientCard = require('./modules/clientCard'),
-          form = require('./modules/form');
-          
 
     header();      
     upslider();
@@ -33,8 +33,10 @@ window.addEventListener('DOMContentLoaded', function() {
     timer();
     clientCard();
     form();
+    calculating();
     
     
 
     new WOW().init();
+    
 });

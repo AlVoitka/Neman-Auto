@@ -18,4 +18,4 @@ function scrollUP() {
 
 }
 
-module.exports = scrollUP;
+export default scrollUP;

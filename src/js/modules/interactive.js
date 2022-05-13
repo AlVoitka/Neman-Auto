@@ -55,7 +55,7 @@ function interactive() {
         e.preventDefault();
 
         const userValue = addInput.value;
-              userCheck = checkbox.checked;
+        const userCheck = checkbox.checked;
 
         if(userValue || userCheck) {
 
@@ -85,4 +85,4 @@ function interactive() {
 
 }
 
-module.exports = interactive; 
+export default interactive; 

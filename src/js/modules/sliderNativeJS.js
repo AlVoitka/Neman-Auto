@@ -117,4 +117,4 @@ function sliderJS() {
 
 }
 
-module.exports = sliderJS; 
+export default sliderJS; 

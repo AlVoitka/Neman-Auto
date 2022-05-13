@@ -40,4 +40,4 @@ function header() {
 
 }
 
-module.exports = header;
+export default header;

@@ -28,4 +28,4 @@ function mailer() {
 
 }
 
-module.exports = mailer; 
+export default mailer; 
