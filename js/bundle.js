@@ -2,6 +2,65 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/modules/animation_JS.js":
+/*!****************************************!*\
+  !*** ./src/js/modules/animation_JS.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function animation_JS() {
+
+
+    const trackLess = document.querySelector('#track_less img'),
+          trackOver = document.querySelector('#trackTwo_over img'),
+          btmLess = document.querySelector('#less_5'),
+          btmOver = document.querySelector('#over_5');
+
+    let animationLessTrack;
+    let animationOverTrack;
+    
+    btmLess.addEventListener('click', ()=> {
+        if(!animationLessTrack) {
+            animationLessTrack = trackLess.animate([
+                {transform: 'translateY(5px)'},
+                {transform: 'skewY(30deg)'},
+                {transform: 'translateX(-200px)'},
+                {filter: 'opacity(0)'}
+            ], {
+                duration: 1000,
+                iterations: 1
+            }); 
+        }
+    })
+
+    btmOver.addEventListener('click', ()=> {
+        if(!animationOverTrack) {
+            animationOverTrack = trackOver.animate([
+                {transform: 'translateY(5px)'},
+                {transform: 'skewY(-30deg)'},
+                {transform: 'translateX(200px)'},
+                {filter: 'opacity(0)'}
+            ], {
+                duration: 1000,
+                iterations: 1
+            }); 
+        }
+    })
+
+    
+
+
+}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (animation_JS);
+
+/***/ }),
+
 /***/ "./src/js/modules/calculating.js":
 /*!***************************************!*\
   !*** ./src/js/modules/calculating.js ***!
@@ -87,7 +146,11 @@ function calculating() {
     getFleetInformation('#count-tracks');
     getFleetInformation('#count-drivers');
 
-    console.log(trucks_count);
+
+
+
+   
+
 
 
 
@@ -1254,6 +1317,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_clientCard__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/clientCard */ "./src/js/modules/clientCard.js");
 /* harmony import */ var _modules_form__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/form */ "./src/js/modules/form.js");
 /* harmony import */ var _modules_calculating__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/calculating */ "./src/js/modules/calculating.js");
+/* harmony import */ var _modules_animation_JS__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/animation_JS */ "./src/js/modules/animation_JS.js");
 
 
 
@@ -1290,6 +1354,7 @@ window.addEventListener('DOMContentLoaded', function() {
     (0,_modules_clientCard__WEBPACK_IMPORTED_MODULE_12__["default"])();
     (0,_modules_form__WEBPACK_IMPORTED_MODULE_13__["default"])();
     (0,_modules_calculating__WEBPACK_IMPORTED_MODULE_14__["default"])();
+    (0,_modules_animation_JS__WEBPACK_IMPORTED_MODULE_15__["default"])();
     
     
 

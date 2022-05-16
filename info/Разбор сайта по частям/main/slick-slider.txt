@@ -1,5 +1,14 @@
 https://swiperjs.com/demos  -- тоже жороший слайдер
 
+Слик слайдер работаен на библиотеке jquery и соответсвенно к проекту нужно ее подключать, а это немного замедляет работу страницы.
+В идеале нужно делать или подключатьслайдеры на нативном JS такие как tiny-slider.
+
+- https://github.com/ganlanyuan/tiny-slider/blob/0fcb2e643489802da28eb1a84b15fec6c7ed54b6/README.md
+- https://owlcarousel2.github.io/OwlCarousel2/
+- https://galleriajs.github.io/
+- https://fotorama.io/
+- https://hammerjs.github.io/
+
 
 https://kenwheeler.github.io/slick/
 

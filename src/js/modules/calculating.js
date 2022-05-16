@@ -73,7 +73,11 @@ function calculating() {
     getFleetInformation('#count-tracks');
     getFleetInformation('#count-drivers');
 
-    console.log(trucks_count);
+
+
+
+   
+
 
 
 
