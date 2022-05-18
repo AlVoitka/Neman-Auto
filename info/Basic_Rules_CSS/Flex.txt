@@ -1,6 +1,8 @@
 http://css.yoksel.ru/flexbox/
 https://tproger.ru/translations/how-css-flexbox-works/
 
+https://web.archive.org/web/20210718095533/https://html5.by/blog/flexbox/  -- класс
+
 
 1. Выравнивает блок в центр по вертикали и горизонтали
 
@@ -12,3 +14,10 @@ https://tproger.ru/translations/how-css-flexbox-works/
 
     display: flex;      
     flex-wrap: wrap;
+
+
+3. Порядок следования элементов
+Flexbox (флексбокс) предназначен для вёрстки гибких макетов. Ежели свойство display контейнера принимает значение flex, 
+его прямые потомки становятся flex-элементами, порядком следования которых можно управлять с помощью свойств flex-flow и order.  
+
+http://shpargalkablog.ru/2016/06/order.html

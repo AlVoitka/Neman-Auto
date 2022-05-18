@@ -20,3 +20,9 @@ margin: 0 auto;
 3.  text-transform: uppercase;  --- Все буквы в верхний регистр
     font-weight: normal;  --- толщина шрифта
 
+4.
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+

@@ -3309,6 +3309,34 @@ h1 {
   width: 100%;
 }
 
+.grid-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 1px;
+  grid-template-areas: "slonim slonim slonim slonim" "madrid madrid madrid slonim";
+}
+
+.grid-elem {
+  min-height: 50px;
+  background-color: #5a35e0;
+  color: #fff;
+  line-height: 55px;
+  text-align: center;
+  font-size: 26px;
+  border: 1px solid #494444;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.4s all;
+  align-items: start;
+  justify-items: start;
+}
+
+.grid-elem:hover {
+  background-color: #451cda;
+}
+
 @media (max-width: 1600px) {
   #media_2 {
     display: flex;
