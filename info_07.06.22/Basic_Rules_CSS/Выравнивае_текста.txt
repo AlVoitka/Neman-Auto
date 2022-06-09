@@ -10,10 +10,13 @@ line-height: 100px;  ---- Устанавливает интерлиньяж (м�
 display: inline-block;
 vertical-align: middle;
 
-или
+3. FLEX
 
-display: flex; 
+display: flex;
+// justify-content: center;
 margin: 0 auto;
+align-items: center;
+
 
 или 
 

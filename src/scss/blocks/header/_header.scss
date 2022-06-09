@@ -8,12 +8,12 @@ h1 {
     justify-content: space-between;
     align-items: center;
     height: 60px;
-    padding: 0 50px;
+    padding: 0 25px;
     background-color: fill="white";
     &__left-block {
         display: flex;
         justify-content: space-between;
-        min-width: 250px;
+        width: 150px;
     }
     &__logo {
         width: 250px;
@@ -21,7 +21,9 @@ h1 {
     }
     &__links {
         display: flex;
+        justify-content: space-between;
         align-items: center;
+        width: 700px;
     }
     &__drop {
         width: 90px;
@@ -94,7 +96,6 @@ h1 {
     }
     &__link {
         position: relative;
-        margin-right: 80px;
         font-weight: bold;
         font-size: 18px;
         transition: 0.5s all;

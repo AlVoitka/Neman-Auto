@@ -6,15 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/src/img/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/dist/css/style.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Neman-Auto</title>
 </head>
 <body>
+
+    <div class="sidebar">
+        
+        <div class="sidebar__block">
+
+            <div data-close class="sidebar__close">&times;</div>
+
+            <nav>
+                <ul class="sidebar__list">
+                    <li class="sidebar__link"><a href="#about">to home</a></li>
+                    <li class="sidebar__link"><a href="#resume">about as</a></li>
+                    <li class="sidebar__link"><a href="#skills">Our services</a></li>
+                    <li class="sidebar__link"><a href="#portfolio">Why we?</a></li>
+                    <li class="sidebar__link"><a href="#contacts">consultation</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class="sidebar__overlay"></div>
+
+    </div>
     
     <section class="sticky">
 
-            <header class="header" id="media_2">
+            <header class="header">
         
                 <div class="header__left-block" id="media_1">
                     <div class="header__logo">
@@ -31,11 +53,9 @@
                         <a href="#services" class="header__link">Our services</a>
                         <a href="#why-we" class="header__link">Why we?</a>
                         <a href="#consultation" class="header__link">consultation</a>
-                        <a href="#map" class="header__link">Map</a>
-                        
 
                         <ul class="menu">
-                            <li><a href="#" class="header__drop">careers </a>
+                            <li><a href="#" class="header__drop">careers</a>
                                 <ul>
                                     <li><a href="#" class="header__drop-a">driver</a></li>
                                     <li><a href="#" class="header__drop-a">spedit</a></li>
@@ -54,10 +74,12 @@
         
     </section>
 
-    <main class="main">
+
+    <!-- <main class="main"> -->
         <section  id="up" class="promo">
             <div class="container">
-                <div class="wrapper">
+
+                <div class="promo__wrapper">
                     <h2 class="animate__animated wow animate__backInRight" data-wow-duration="2s" data-wow-delay="1s">
                         Neman-Auto LLC
                     </h2>
@@ -67,9 +89,10 @@
                     <a href="#down" class="scroll-down wow animate__animated animate__slideInDown"data-wow-iteration="2" data-wow-duration="2s" data-wow-delay="3s">
                         <img src="/src/scss/blocks/scrollUP/down-arrow.svg" alt="up">
                     </a>
-
-
                 </div>
+
+                <div class="promo__hamburger">MENU</div>
+
             </div>
         </section>
         
@@ -84,15 +107,15 @@
                 <div class="aboutAs__wrp">
                     <div class="aboutAs__item1">
                         <div class="myslider__upslider">
-                            <div>
-                                <img src="/src/scss/blocks/main/aboutAs/look.com.ua-102883.jpg" alt="1">
-                            </div>
-                            <div>
-                                <img src="/src/scss/blocks/main/aboutAs/man_trucks_030415.jpg" alt="2">
-                            </div>
-                            <div>
-                                <img src="/src/scss/blocks/main/aboutAs/2020-scania.jpg" alt="3">
-                            </div>
+                        
+                            <img src="/src/scss/blocks/main/aboutAs/look.com.ua-102883.jpg" alt="1">
+                        
+                    
+                            <img src="/src/scss/blocks/main/aboutAs/man_trucks_030415.jpg" alt="2">
+                        
+                    
+                            <img src="/src/scss/blocks/main/aboutAs/2020-scania.jpg" alt="3">
+                            
                         </div>
                     </div>
                     <div class="aboutAs__item2">
@@ -116,7 +139,7 @@
 
 
 
-        <section class="aboutAs">
+        <!-- <section class="aboutAs">
             <div class="container">
                 <div class="aboutAs__wrp">
 
@@ -169,7 +192,7 @@
             <div class="divider__stripe">
                 <h2 class="divider__h2">Our services</h2>
             </div>
-        </div>
+        </div> -->
 
 
 
@@ -330,7 +353,7 @@
         </div>
 
 
-        <section class="clientСard">
+        <!-- <section class="clientСard">
             <div class="container">
                 <div class="menu">
 
@@ -350,10 +373,10 @@
             <div class="divider__stripe">
                 <h2 class="divider__h2">CONSULTATION</h2>
             </div>
-        </div>
+        </div> -->
 
 
-        <div class="calculating">
+        <!-- <div class="calculating">
             <div class="container">
                 <h2 class="title">Let's calculate your cargo turnover
                 </h2>
@@ -404,7 +427,7 @@
             <div class="divider__stripe">
                 <h2 class="divider__h2">CONSULTATION</h2>
             </div>
-        </div>
+        </div> -->
 
 
 
@@ -433,7 +456,7 @@
         </div>
 
 
-        <div class="promotion">
+        <!-- <div class="promotion">
             <div class="bgc_y"></div>
             <div class="container">
                 <div class="promotion__text">
@@ -476,9 +499,9 @@
             <div class="divider__stripe">
                 <h2 class="divider__h2">Story</h2>
             </div>
-        </div>
+        </div> -->
 
-        <section class="myslider">
+        <!-- <section class="myslider">
             <div class="container">
                 <div class="myslider__downslider">
                     <div>
@@ -507,9 +530,9 @@
             <div class="divider__stripe">
                 <h2 class="divider__h2">Map</h2>
             </div>
-        </div>
+        </div> -->
 
-        <section class="scc-grid">
+        <!-- <section class="scc-grid">
             <div class="container">
                     <div class="grid-container">
                         <div id="paris"  class="grid-elem">Paris</div>
@@ -536,11 +559,11 @@
             <div class="divider__stripe">
                 <h2 class="divider__h2">Map</h2>
             </div>
-        </div>
+        </div> -->
 
-    </main>
+    <!-- </main> -->
 
-    <footer class="footer">
+    <!-- <footer class="footer">
         <div class="container">
             <div class="footer__wrapper">
                 <div class="footer__descr">
@@ -579,7 +602,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
     <a href="#up" class="scroll-up scroll-up__animated"><img src="/src/scss/blocks/scrollUP/up-arrow.svg" alt="up"></a>
 

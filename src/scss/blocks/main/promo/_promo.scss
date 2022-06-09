@@ -1,6 +1,6 @@
 .promo {
     min-height: 100vh;
-    background: url('/src/img/road.jpg') center center/cover no-repeat;
+    background: url('/src/img/road.jpg') no-repeat 100%/cover;
     h2 {
         font-size: 70px;
         text-align: center;
@@ -13,9 +13,50 @@
         padding-top: 150px;
         color: rgba(236, 97, 108,1);
     }
+    &__wrapper {
+        min-height: 600px;
+    }
+    &__hamburger {
+        position: fixed;
+        opacity: 0.8;
+        top: 20px;
+        right: 30px;
+        height: 30px;
+        width: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(236, 97, 108, .6);
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s all;
+        z-index: 3;
+    }
+    
     
 }
 
-.wrapper {
-    min-height: 600px;
+.scroll-down {
+    display: block;
+    margin: 0 auto;
+    margin-top: 25%;
+    right: 50%;
+    width: 50px;
+    height: 50px;
+    img {
+        width: 100%;
+    }
+    &__animated {
+        animation-name: up-arrow;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+        animation-iteration-count: 2;
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
 }
+
+
+

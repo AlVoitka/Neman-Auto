@@ -1,8 +1,9 @@
 
 import upslider from './modules/upslider';
 import header from './modules/header';
+import sidebar from './modules/sidebar';
 import downslider from './modules/downslider';
-import sliderJS from './modules/sliderNativeJS';
+// import sliderJS from './modules/sliderNativeJS';
 import tabs from './modules/tabs';
 import scrollUP from './modules/scrollUP';
 import prompts from './modules/prompts';
@@ -17,12 +18,14 @@ import calculating from './modules/calculating';
 import animation_JS from './modules/animation_JS';
 
 
+
 window.addEventListener('DOMContentLoaded', function() {
 
-    header();      
+    header();  
+    sidebar();    
     upslider();
     downslider();
-    sliderJS();
+    // sliderJS();
     tabs();
     scrollUP();
     modal_jQ();

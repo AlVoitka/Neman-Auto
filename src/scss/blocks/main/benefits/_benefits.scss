@@ -4,6 +4,7 @@
         height: 500px;
         display: flex;
         justify-content: space-between;
+        padding: 0 20px 0 20px;
     }
     &__menu {
         display: flex;
@@ -47,7 +48,7 @@
         justify-content: center;
         align-items: center;
         height: 500px;
-        width: 1000px;
+        width: 80%;
         text-align: center;
         border: 3px solid rgb(121, 119, 235);;
         border-radius: 25px;
