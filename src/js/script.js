@@ -12,10 +12,10 @@ import modal_JS from './modules/modal_JS';
 import mailer from './modules/mailer';
 import interactive from './modules/interactive';
 import timer from './modules/timer';
-import clientCard from './modules/clientCard';
+// import clientCard from './modules/clientCard';
 import form from './modules/form';
-import calculating from './modules/calculating';
-import animation_JS from './modules/animation_JS';
+// import calculating from './modules/calculating';
+// import animation_JS from './modules/animation_JS';
 
 
 
@@ -34,10 +34,10 @@ window.addEventListener('DOMContentLoaded', function() {
     prompts();
     interactive();
     timer();
-    clientCard();
+    // clientCard();
     form();
-    calculating();
-    animation_JS();
+    // calculating();
+    // animation_JS();
     
     
 

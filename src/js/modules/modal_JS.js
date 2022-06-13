@@ -19,7 +19,6 @@ function modal_JS() {
     modalTrigger1.addEventListener('click', openModal_1);
 
     modalTrigger2.addEventListener('click', (e) => {
-        e.preventDefault();
         overlay.style.display="block";
         modalSucces.style.display="block";
         modalFeedback.style.display="none";
@@ -29,7 +28,7 @@ function modal_JS() {
         overlay.style.display="none";
         modalFeedback.style.display="none";
         modalSucces.style.display="none";
-        document.body.style.overflow="";
+        document.body.style.overflow=""; 
     }
 
     modalClose.forEach(item => {

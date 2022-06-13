@@ -2,6 +2,7 @@
 
 .grid-container {
     display: grid;
+    padding: 5px 15px 5px 15px;
     width: 100%;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;

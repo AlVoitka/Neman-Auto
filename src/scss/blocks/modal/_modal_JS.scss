@@ -5,6 +5,9 @@
     height: 100%;
     top: 0;
     background-color: rgba(0,0,0,.7) ;
+    form {
+        margin: 0 auto;
+    }
 }
 
 .form-JS {
@@ -29,20 +32,20 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 386px;
-    min-height: 220px;
+    min-width: 200px;
+    min-height: 200px;
     background-color: rgb(97, 218, 49);
     padding: 38px 40px 38px 40px;
     border-radius: 10px;
 
     &__close {
         position: absolute;
-        top: 0;
-        right: -45px;
+        top: 10;
+        right: 10px;
         font-size: 65px;
         line-height: 23px;
         font-size: 50px;
-        color: #61da31;
+        color: #e71a36;
         cursor: pointer;
     }
 
