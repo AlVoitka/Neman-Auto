@@ -4,7 +4,7 @@
     width: 100%;
     height: 100%;
     top: 0;
-    background-color: rgba(0,0,0,.7) ;
+    background-color: rgba(0, 0, 0, 0.7) ;
     form {
         margin: 0 auto;
     }
@@ -13,7 +13,7 @@
 .form-JS {
     display: flex;
     flex-direction: column;
-    width: 303px;
+    width: 210px;
     input {
         height: 30px;
         background: #FFFFFF;
@@ -32,7 +32,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 200px;
+    width: 300px;
     min-height: 200px;
     background-color: rgb(97, 218, 49);
     padding: 38px 40px 38px 40px;
@@ -68,7 +68,7 @@
 }
 
 .btn_modal-JS {
-    width: 303px;
+    width: 100%;
     height: 32px;
     display: flex;
     justify-content: center;

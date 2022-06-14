@@ -18,7 +18,7 @@ function modal_JS() {
 
     modalTrigger1.addEventListener('click', openModal_1);
 
-    modalTrigger2.addEventListener('click', (e) => {
+    modalTrigger2.addEventListener('submit', (e) => {
         overlay.style.display="block";
         modalSucces.style.display="block";
         modalFeedback.style.display="none";

@@ -270,4 +270,12 @@
     .grid-elem {
         font-size: 21px;
     }
+    .basement {
+        &__logo {
+            display: none;
+        }
+        &__made {
+            font-size: 13px;
+        }
+    }
 }

@@ -17,7 +17,7 @@
         position: relative;
         width: 25%;
         height: 100%;
-        background-color: rgba(236, 97, 108, .8);
+        background-color: rgba(39, 27, 199, 0.8);
         z-index: 10;
     }
     &__close {
@@ -44,7 +44,7 @@
         line-height: 36px;
         margin-bottom: 18px;
         a {
-            color: rgb(200, 226, 51);
+            color: rgb(250, 248, 249);
             text-decoration: none;
         }
         &:before {
@@ -59,7 +59,7 @@
         }
         &:hover {
             &:before {
-                background-color: rgb(200, 226, 51);
+                background-color: rgb(201, 235, 8);
             }
         }
     }
