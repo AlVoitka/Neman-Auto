@@ -1,0 +1,21 @@
+https://www.youtube.com/watch?v=3bN1TC_qI0E
+
+https://www.youtube.com/watch?v=E_n-jPGniCI
+
+
+1.
+https://vercel.com/
+
+2.
+Вхожу по профилую на github
+
+3.
+Import Git Repository  --- в этом окошке задаю 
+Add git account - и выбираю либо все репозы либо одон который нужно
+
+4.
+Import
+
+5. Deploy
+
+6. проек билдится и по итоги имею линки
