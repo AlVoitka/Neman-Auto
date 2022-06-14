@@ -11,8 +11,8 @@ function downslider() {
             autoplay: true, 
             slidesToShow: 4,
             slidesToScroll: 2,
-            prevArrow: '<button type="button" class="slick-prev"><img src="./img/left-arrow.svg"></button>',
-            nextArrow: '<button type="button" class="slick-next"><img src="./img/right-arrow.svg"></button>',
+            prevArrow: '<button type="button" class="slick-prev"><img src="./dist/img/left-arrow.svg"></button>',
+            nextArrow: '<button type="button" class="slick-next"><img src="./dist/img/right-arrow.svg"></button>',
             responsive: [
 
                 {
